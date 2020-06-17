@@ -6,9 +6,10 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
-import {Grid,Card, Button,Typography} from "@material-ui/core";
+import {Grid,Card, Button,Typography,Dialog,DialogContent,DialogContentText,DialogTitle,Divider} from "@material-ui/core";
 import styles from "./ContactForm.module.css";
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import CloseIcon from '@material-ui/icons/Close';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     
@@ -32,7 +33,13 @@ const useStyles = makeStyles((theme) => ({
 export default function ContactForm(){
     const classes = useStyles();
     const [age1, setAge1] = React.useState('');
-
+    const [open,handleopen]=React.useState(false)
+    const funcopen=()=>{
+      handleopen(true)
+    }
+    const funcclose=()=>{
+      handleopen(false)
+    }
     const handleChange = (event) => {
         setAge1(event.target.value);
     };
@@ -103,7 +110,7 @@ export default function ContactForm(){
             </Grid>
           </Grid>
         </Card>
-        <Button color="primary" variant="contained" style={{marginTop:"20px",width:"150px"}}>
+        <Button color="primary" variant="contained" style={{marginTop:"20px",width:"150px"}} onClick={funcopen}>
           Send
         </Button>
             </Grid>
@@ -111,8 +118,8 @@ export default function ContactForm(){
 
 
             <Dialog
-              open={finalauthenticate}
-              onClose={handleSubmissionClose}
+              open={open}
+              
               aria-labelledby="alert-dialog-title"
               aria-describedby="alert-dialog-description"
               
@@ -133,7 +140,7 @@ export default function ContactForm(){
                       
                       </Grid>
                       <Grid item xs={5}>
-                          <Typography style={{display:"flex",height:"6vh",justifyContent:"flex-start",alignItems:"center",marginLeft:"-5px"}}>Authorize Change </Typography>
+                          <Typography style={{display:"flex",height:"6vh",justifyContent:"flex-start",alignItems:"center",marginLeft:"-5px"}}>Message Sent </Typography>
                       
                       </Grid>
                       </Grid>
@@ -142,7 +149,7 @@ export default function ContactForm(){
                   
                   <Grid items xs={1} style={{height:"6vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
                   
-                  <CloseIcon onClick={handlecloselastdialog} />
+                  <CloseIcon onClick={funcclose} />
                   
                       
                   </Grid>
@@ -154,12 +161,12 @@ export default function ContactForm(){
               <Divider/>
               <DialogContent style={{width:"22vw"}}>
               <DialogContentText id="alert-dialog-description">
-              You are about to make permanent changes to your account settings. Do you want to continue?
+              Your message has been recieved, someone from our team will respond to you within 24 hours.
               </DialogContentText>
               </DialogContent>
               <Divider/>
               <Typography style={{marginTop:"15px", display:"flex",justifyContent:"space-evenly",alignItems:"center" ,marginBottom:"20px"}}>
-              <Button  type="submit"color="primary" variant="contained">
+              <Button  type="submit"color="primary" variant="contained" onClick={funcclose}>
                   Continue
               </Button>
               </Typography>
