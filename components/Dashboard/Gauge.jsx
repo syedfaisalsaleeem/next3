@@ -1,5 +1,5 @@
 import React from 'react';
-import GaugeChart from 'react-gauge-chart';
+import GaugeChart from './Assets';
 import {Typography,Grid} from '@material-ui/core';
 import CountUp from 'react-countup';
 import InfoIcon from '@material-ui/icons/Info';
