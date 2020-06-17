@@ -173,8 +173,8 @@ export default function ContactDrawer(props) {
         })} 
       >
         <div className={classes.drawerHeader} />
-        <ContactC/>
         
+        <ContactC/>
         
       </main>
       <footer>
