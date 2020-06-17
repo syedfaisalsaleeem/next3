@@ -34,9 +34,12 @@ export default function ContactC (){
                         
                     </Grid>
                 </Grid>
-                <Grid item xs={12} >
-                    <Grid container justify="center" spacing={1}>
-                        <Grid item xl={1}lg={2} md={2}xs={4}>
+                <Grid item xs={12}>
+                    <Grid container justify="center" >
+                    <Grid item lg={6} md={10} xs={12}>
+                    <Grid container justify="space-evenly">
+                        <Grid item lg={3} md={3} xs={4}>
+                            
                             <Card style={{paddingTop:"20px",paddingBottom:"20px",borderStyle:"solid",borderWidth:"1px",borderColor:"#8950FC",borderRadius:"6px"}}>
 
                             <Grid container direction="column" justify="center" spacing={1}>
@@ -55,9 +58,11 @@ export default function ContactC (){
                             
                             </Grid>
                             </Card>
+                            
                         </Grid>
-                        <Grid item xl={1}lg={2} md={2} xs={4}>
-                            <Card style={{paddingTop:"20px",paddingBottom:"20px",marginLeft:"2px",marginRight:"2px"}}>
+                        <Grid item lg={3} md={3} xs={4} >
+                        
+                            <Card style={{paddingTop:"20px",paddingBottom:"20px"}}>
                             <Grid container direction="column" justify="center" spacing={1}>
                                 <Grid item >
                                     <Grid container justify="center">
@@ -74,9 +79,10 @@ export default function ContactC (){
                             
                             </Grid>
                             </Card>
+
                         </Grid>
-                        <Grid item xl={1}lg={2} md={2} xs={4}>
-                            <Link href="./Contactus1">
+                        <Grid item lg={3} md={3} xs={4}>
+                        <Link href="./Contactus1">
                             <Card style={{paddingTop:"20px",paddingBottom:"20px"}}>
                                 <Grid container direction="column" justify="center" spacing={1}>
                                     <Grid item >
@@ -96,7 +102,8 @@ export default function ContactC (){
                             </Card>
                             </Link>
                         </Grid>
-                    
+                        </Grid>
+                        </Grid>
                     </Grid>
 
                 </Grid>

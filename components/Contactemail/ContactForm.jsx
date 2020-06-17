@@ -23,6 +23,25 @@ const useStyles = makeStyles((theme) => ({
     }
     
   },
+  email:{
+    
+    position: "absolute",
+    marginLeft: "35.5vw",
+    width:"170px",
+    height:"38px",
+    marginTop: "20px",
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    border: "10px solid #FFFFFF",
+    boxSizing: "border-box",
+    boxShadow: "0px 0px 20px rgba(92, 111, 139, 0.12)",
+    borderRadius: "9px",
+    
+    fontStyle: "normal",
+    fontWeight: "bold",
+    fontSize: "13px",
+},
   input: {
     display: 'none',
   },
@@ -65,17 +84,24 @@ export default function ContactForm(){
               <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
-                                    <TextField
-                                    className={classes.formControl}
-                                        
-                                        margin="dense"
-                                        id="name"
-                                        label="Subject"
-                                        type="email"
-                                        variant="outlined"
-                                        
-                                        fullWidth
-                                    />
+            <div>
+
+            
+            <div className={classes.email} style={{display:"flex"}}>
+                                <p> Field is  required</p>
+                            </div>
+              <TextField
+              className={classes.formControl}
+                  
+                  margin="dense"
+                  id="name"
+                  label="Subject"
+                  type="email"
+                  variant="outlined"
+                  
+                  fullWidth
+              />
+                  </div>            
           <TextField
           className={classes.formControl}
           id="outlined-multiline-static"
