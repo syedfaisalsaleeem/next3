@@ -1,8 +1,27 @@
 import Head from 'next/head'
-import Login from "./Login";
 import React from 'react';
+import Header from "../components/Header";
+import CyberDrawer from "../components/Settings/Drawer1"
+import Footer from "../components/Footer"
 
 class Home extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      drawer:true
+    }
+    this.handledrawer=this.handledrawer.bind(this)
+  }
+  
+    
+  
+  handledrawer(){
+    console.log("handledrawer",this.state.drawer)
+    this.setState((prevState)=>{
+      return{drawer:!prevState.drawer}
+    }
+    )
+  }
 render(){  
   return (
     <div className="container">
@@ -10,20 +29,20 @@ render(){
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
         
+        
       </Head>
 
-      <main>
-      
+      <main style={{background:"#E5E5E5"}}>
+        <Header call={this.handledrawer}/>
+        <CyberDrawer call={this.state.drawer}/>
         
-        
-        
-        <Login/>
-        
-
       </main>
 
-      <footer>
-        
+      <footer style={{display:"flex",marginBottom:"-65vh",background:"#E5E5E5"}}>
+      
+      <Footer />
+         
+       
       </footer>
 
 
@@ -40,12 +59,6 @@ render(){
         * {
           box-sizing: border-box;
         }
-        .percent-text{
-          text-anchor: middle;
-          font-family: 'Roboto', sans-serif;
-          
-        }
-        
       `}</style>
     </div>
   )
