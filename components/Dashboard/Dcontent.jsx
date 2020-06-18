@@ -26,16 +26,26 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Roboto', 
         
           fontSize:"21px",
-          fontWeight:"600px",
+          fontWeight:"bold",
           fontStyle:"normal"
       },
     paper: {
       height: 140,
       width: 100,
     },
-    f1:{
-        width:"100%"
+    fontheader:{
+
     },
+    
+    f1:{
+       width:"95%"
+    },
+    f2:{
+        width:"97.4%"
+     },
+     f3:{
+        width:"95%"
+     },
     control: {
       padding: theme.spacing(2),
     },
@@ -58,60 +68,73 @@ export default function (){
                     Security Overview
                 </Typography>
                 </Grid>
-                <Grid item xs={12} md={6}  >
-                    <Grid container justify="flex-start"  style={{background:"yellow"}}>
-                        <Card className={classes.f1}>
-                            <CardHeader
-                                className={classes.HeaderFont}
-                            
-                                disableTypography="true" 
-                                action={
-                                    
-                                    <IconButton color="primary" >
-                                    <ChevronRightIcon style={{fontSize:"25px"}}/>
-                                    </IconButton>
-                                    
-                                }
-                                
-                                title="Cyber Exposure Score "      
-                                />
-                            <Divider/>
-                            <CardContent>
-                                <Gauge/>
-                            </CardContent>
-                            
-                        </Card>
-                    </Grid>
-                </Grid>
-                <Grid item  xs={12} md={6}>
-                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"yellow"}} >
-                        <Card className={classes.f1}>
-                            <CardHeader
-                            className={classes.HeaderFont}
-                           
-                            disableTypography="true" 
-                            action={
-                                
-                                <IconButton color="primary"  >
-                                    <ChevronRightIcon style={{fontSize:"25px"}} />
-                                    </IconButton>
-                                
-                            }
-                            
-                            title="Exposed Information"      
-                            />
-                            <Divider/>
-                            <CardContent>
-                                <Graph/>
-                            </CardContent>
-                          
-                        </Card>
-                    </Grid>
-
-                </Grid>
                 <Grid item xs={12}>
-                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"yellow"}}>
-                        <Card className={classes.f1}>
+                    <Grid container justify="flex-start"  >
+                        <Grid item xs={12} md={12} >
+
+                            <Grid container  justify="space-evenly" spacing={4}>
+
+                            
+                                <Grid item xs={12} sm={10}  lg={5}  >
+                                
+                                    <Grid container justify="flex-start"  >
+                                        <Card className={classes.f1} >
+                                            <CardHeader
+                                                className={classes.HeaderFont}
+                                            
+                                                disableTypography="true" 
+                                                action={
+                                                    
+                                                    <IconButton color="primary" >
+                                                    <ChevronRightIcon style={{fontSize:"25px"}}/>
+                                                    </IconButton>
+                                                    
+                                                }
+                                                
+                                                title="Cyber Exposure Score "      
+                                                />
+                                            <Divider/>
+                                            
+                                                <Gauge/>
+                                            
+                                            
+                                        </Card>
+                                    </Grid>
+                                </Grid>
+                                
+                                <Grid item  xs={12} sm={10}  lg={7}>
+                                    <Grid container justify="flex-start" maxWidth="xl"  >
+                                        <Card className={classes.f1}>
+                                            <CardHeader
+                                            className={classes.HeaderFont}
+                                        
+                                            disableTypography="true" 
+                                            action={
+                                                
+                                                <IconButton color="primary"  >
+                                                    <ChevronRightIcon style={{fontSize:"25px"}} />
+                                                    </IconButton>
+                                                
+                                            }
+                                            
+                                            title="Exposed Information"      
+                                            />
+                                            <Divider/>
+                                            
+                                                <Graph/>
+                                            
+                                        
+                                        </Card>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                
+                <Grid item xs={12} md={12}>
+                    <Grid container justify="flex-start" style={{background:"transparent"}}>
+                        <Card className={classes.f2}>
                             <CardHeader
                                 className={classes.HeaderFont}
                             
@@ -143,8 +166,8 @@ export default function (){
                 </Typography>
                 </Grid>
 
-                <Grid item xs={12} md={6} >
-                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"yellow"}}>
+                <Grid item xs={12} md={10} lg={6} >
+                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"transparent"}}>
                         <Card className={classes.f1}>
                             <CardHeader
                                 className={classes.HeaderFont}
@@ -161,16 +184,16 @@ export default function (){
                                 title="By Category"      
                                 />
                             <Divider/>
-                            <CardContent>
+                            
                             <Piechart/>
-                            </CardContent>
+                            
                             
                         </Card>
                     </Grid>
                 </Grid>
-                <Grid item  xs={12} md={6}>
-                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"yellow"}} >
-                        <Card className={classes.f1}>
+                <Grid item  xs={12} md={10} lg={6}>
+                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"transparent"}} >
+                        <Card className={classes.f3}>
                             <CardHeader
                             className={classes.HeaderFont}
                            
@@ -186,17 +209,17 @@ export default function (){
                             title="By Risk"      
                             />
                             <Divider/>
-                            <CardContent>
+                         
                                 <Linechart/>
-                            </CardContent>
+                           
                           
                         </Card>
                     </Grid>
 
                 </Grid>
                 <Grid item  xs={12} md={12} >
-                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"yellow"}} >
-                        <Card className={classes.f1}>
+                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"transparent"}} >
+                        <Card className={classes.f2}>
                             <CardHeader
                             className={classes.HeaderFont}
                            
@@ -212,9 +235,9 @@ export default function (){
                             title="By Risk"      
                             />
                             <Divider/>
-                            <CardContent  >
+                            
                                 <BarGroup/>
-                            </CardContent>
+                            
                           
                         </Card>
                     </Grid>

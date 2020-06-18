@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
-import {Bar,Line,Pie} from 'react-chartjs-2';
+import {Bar,Line,Pie,Doughnut} from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import {Grid} from "@material-ui/core"
 class Piechart extends Component{
     constructor(props){
         super(props);
@@ -51,10 +52,11 @@ class Piechart extends Component{
     }
 render(){
     return(
-        <div className="chart">
-            <Pie
+        <div className="chart" style={{height:"48vh",maxHeight:"435px",minHeight:"435px",margin:"20px"}}>
+            
+                <Doughnut
             data= {{
-                labels:['Label A',"Label B","Label C","Label D"],
+                labels:['Label (8668)',"Label (8668)","Label (8668)","Label (8668)"],
         datasets: [{
             data: [26, 14, 27, 33],
             backgroundColor:  ['#D0021B','#50E3C2','#F5A623',"#03BD5B"],
@@ -63,14 +65,16 @@ render(){
         }]
     }}
     options= {{
-
+        maintainAspectRatio: false,
+        cutoutPercentage: 30,
         legend: {
             display: true,
             position: 'right',
             labels: {
                 boxWidth: 20,
-                fontColor: '#111',
-                padding: 15
+                fontColor: '#8D9AA9',
+                padding: 15,
+                fontSize: 20
             }
         },
         tooltips: {
@@ -87,7 +91,7 @@ render(){
                 font: {
                     lineHeight: 0,
                     weight: 'bold',
-                    size: 16,
+                    size: 26,
                     
                 },
                 
@@ -99,6 +103,8 @@ render(){
     }}
             
             />
+             
+            
             
         </div>
     )

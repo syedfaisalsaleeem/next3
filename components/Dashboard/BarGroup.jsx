@@ -4,11 +4,15 @@ import { Bar } from "react-chartjs-2";
 
 
 
-export default class BarGroup extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: {
+import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+
+
+    const databar = {
+      
         labels: [
           "January",
           "February",
@@ -52,32 +56,104 @@ export default class BarGroup extends React.Component {
           }
         ]
       }
-    };
-  }
-
-  render() {
+    
+  
+  
+  
+    const useStyles = makeStyles((theme) => ({
+      formControl: {
+        
+        minWidth: 200,
+        width:"5vw",
+        background:"white",
+        marginTop:"20px",
+        marginLeft:"20px",
+        height:"25px",
+        '& fieldset': {
+          border: "1px solid #000000",
+        }
+        
+      }
+    }))
+    
     const options = {
-      
+      maintainAspectRatio: false,
       legend: {
-        display: true
+        display:true,
+        position:'top',
+        align:'end'
       },
       type: "bar"
-      //   scales: {
-      //     xAxes: [{
-      //         stacked: true
-      //     }],
-      //     yAxes: [{
-      //         stacked: true
-      //     }]
-      // }
+
     };
-    return (
-      <Bar
-        data={this.state.data}
-        width={null}
-        height={null}
-        options={options}
-      />
-    );
+  export default function BarGroup(){
+    const classes = useStyles();
+  const [age1, setAge1] = React.useState('');
+  const [open,handleopen]=React.useState(false)
+  const funcopen=()=>{
+    handleopen(true)
   }
+  const funcclose=()=>{
+    handleopen(false)
+  }
+  const handleChange = (event) => {
+      setAge1(event.target.value);
+  };
+    return (
+      <div style={{maxHeight:"455px",minHeight:"455px",margin:"10px"}}>
+          <div styles={{display:"flex",postion:"absolute"}}>
+          <FormControl className={classes.formControl} size="small" >
+                
+                <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={age1}
+                onChange={handleChange}
+                
+                
+                variant="outlined"
+                displayEmpty
+                >
+               <MenuItem value="">
+              <em>Select Month</em>
+              </MenuItem>  
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+            <FormControl className={classes.formControl} size="small" >
+                
+                <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={age1}
+                onChange={handleChange}
+                
+                
+                variant="outlined"
+                displayEmpty
+                >
+               <MenuItem value="">
+              <em>Select Week Range</em>
+              </MenuItem> 
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+        </div>
+        <div style={{maxHeight:"400px",minHeight:"400px"}}>
+        <Bar
+          data={databar}
+          
+          options={options}
+        />
+        </div>
+        
+      </div>
+      
+    );
+  
+
 }

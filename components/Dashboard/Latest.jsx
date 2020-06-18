@@ -16,10 +16,16 @@ import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import RemoveRoundedIcon from '@material-ui/icons/RemoveRounded';
+import Chip from '@material-ui/core/Chip';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       
+      
+    },
+    button1:{
+        fontSize:'12px !important',
+        
     },
     root1: {
         marginBottom:"-50px",
@@ -86,14 +92,22 @@ const useStyles = makeStyles((theme) => ({
         justifyContent:"flex-start",
         alignItems:"flex-end",
         fontStyle: "normal",
-        fontWeight: "600",
-        fontSize: "16px"
+        fontWeight: "700",
+        fontSize: "17px",
+        marginBottom:"5px"
     },
     bottom:{
         display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"flex-start",alignItems:"flex-start",
         fontStyle: "normal",
         fontWeight: "400",
         fontSize: "15px"
+    },
+    chipborder:{
+        border:"solid",
+        borderColor:"black",
+        borderWidth:"0.1px",
+        fontSize:"12px",
+        fontColor:"black"
     },
     control: {
       padding: theme.spacing(2),
@@ -102,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Latest(){
     const classes = useStyles();
     const [st1,set]=React.useState([""]);
-    const [click,setclick]=React.useState(false);
+    const [click,setclick]=React.useState(true);
     const addcount=()=>{
         setclick(!click)
     }
@@ -135,10 +149,10 @@ export default function Latest(){
                             
                                 
                             <Grid container justify="flex-start" maxWidth="xl" style={{background:"white"}} spacing={0} >
-                                <Grid item md={12} lg={1} style={{background:"white",minWidth:"70px",height:"10vh",minHeight:"80px"}}>
+                                <Grid item xs={12}  lg={1} style={{background:"white",minWidth:"70px",height:"10vh",minHeight:"80px"}}>
                                     <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",borderStyle:"solid",borderWidth:"0.1px",borderTop:"white",borderLeft:"white",borderBottom:"white"}} >
                                         
-                                            <div style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center"}} >
+                                            <div style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center",fontSize:"14px"}} >
                                             DD-MM-YYYY
                                             </div>
                                         
@@ -148,7 +162,7 @@ export default function Latest(){
                                         
                                         
                                             
-                                            <div container style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center",background:"#66BB6A",color:"white"}} >
+                                            <div container style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center",background:"#66BB6A",color:"white",fontSize:"18px",fontWeight:"600"}} >
                                             Low
                                             </div>
                                         
@@ -159,7 +173,7 @@ export default function Latest(){
                                     </div>
 
                                 </Grid>
-                                <Grid item md={12} lg={2}>
+                                <Grid item xs={12}  lg={2}>
                                 <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
                                         
                                         <div className={classes.top} >
@@ -175,7 +189,7 @@ export default function Latest(){
 
                                 </Grid>
                                 
-                                <Grid item md={12} lg={3}>
+                                <Grid item xs={12} lg={3}>
 
                                     <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
                                         
@@ -190,7 +204,7 @@ export default function Latest(){
                                     </div>
 
                                 </Grid>
-                                <Grid item md={12} lg={3}>
+                                <Grid item xs={12}  lg={3}>
                                     <Grid container justify="flex-start" >
                                         
                                     <div style={{display:"flex",flexDirection:"column",minWidth:"120px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
@@ -202,25 +216,13 @@ export default function Latest(){
                                         <div className={classes.bottom} >
                                             
                                             <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                            <Card style={{display:"flex",justifyContent:"center",alignItems:"center",borderStyle:"solid",borderWidth:"0.1px",padding:"4px"}}>
-                                                
-                                                    KeyWord
-                                                
-                                            </Card>
+                                            <Chip size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
                                             </div>
                                             <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                            <Card style={{display:"flex",justifyContent:"center",alignItems:"center",borderStyle:"solid",borderWidth:"0.1px",padding:"4px"}}>
-                                                
-                                                    KeyWord
-                                                
-                                            </Card>
+                                            <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder} />
                                             </div>
                                             <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                            <Card style={{display:"flex",justifyContent:"center",alignItems:"center",borderStyle:"solid",borderWidth:"0.1px",padding:"4px"}}>
-                                                
-                                                    KeyWord
-                                                
-                                            </Card>
+                                            <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
                                             </div>
                                             
 
@@ -231,7 +233,7 @@ export default function Latest(){
                                     </Grid>
 
                                 </Grid>
-                                <Grid item md={12} lg={3}>
+                                <Grid item xs={12}  lg={3}>
                                     <Grid container alignItems="flex-end" justify="flex-end" >
                                         <div style={{display:"flex",minWidth:"120px",height:"10vh",minHeight:"80px",marginLeft:"3vw",alignItems:"center",justifyContent:"flex-end"}}>
                                             <div>
@@ -266,10 +268,10 @@ export default function Latest(){
                             
                                 
                             <Grid container justify="flex-start" maxWidth="xl" style={{background:"white"}} spacing={0} >
-                                <Grid item md={12} lg={1} style={{background:"white",minWidth:"70px",height:"10vh",minHeight:"80px"}}>
+                                <Grid item xs={12} lg={1} style={{background:"white",minWidth:"70px",height:"10vh",minHeight:"80px"}}>
                                     <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",borderStyle:"solid",borderWidth:"0.1px",borderTop:"white",borderLeft:"white",borderBottom:"white"}} >
                                         
-                                            <div style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center"}} >
+                                            <div style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center",fontSize:"14px"}} >
                                             DD-MM-YYYY
                                             </div>
                                         
@@ -279,7 +281,7 @@ export default function Latest(){
                                         
                                         
                                             
-                                            <div container style={{display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center",background:"#66BB6A",color:"white"}} >
+                                            <div container style={{display:"flex",fontSize:"18px",fontWeight:"600",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"center",alignItems:"center",background:"#66BB6A",color:"white"}} >
                                             Low
                                             </div>
                                         
@@ -290,7 +292,7 @@ export default function Latest(){
                                     </div>
 
                                 </Grid>
-                                <Grid item md={12} lg={2}>
+                                <Grid item xs={12} lg={2}>
                                 <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
                                         
                                         <div className={classes.top} >
@@ -305,7 +307,7 @@ export default function Latest(){
                                     
 
                                 </Grid>
-                                <Grid item md={12} lg={3}>
+                                <Grid item xs={12} lg={3}>
                                     <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
                                         
                                         <div className={classes.top} >
@@ -319,7 +321,7 @@ export default function Latest(){
                                     </div>
 
                                 </Grid>
-                                <Grid item md={12} lg={3}>
+                                <Grid item xs={12} lg={3}>
                                     <Grid container justify="flex-start" >
                                         
                                     <div style={{display:"flex",flexDirection:"column",minWidth:"120px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
@@ -331,25 +333,13 @@ export default function Latest(){
                                         <div className={classes.bottom} >
                                             
                                             <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                            <Card style={{display:"flex",justifyContent:"center",alignItems:"center",borderStyle:"solid",borderWidth:"0.1px",padding:"4px"}}>
-                                                
-                                                    KeyWord
-                                                
-                                            </Card>
+                                            <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
                                             </div>
                                             <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                            <Card style={{display:"flex",justifyContent:"center",alignItems:"center",borderStyle:"solid",borderWidth:"0.1px",padding:"4px"}}>
-                                                
-                                                    KeyWord
-                                                
-                                            </Card>
+                                            <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
                                             </div>
                                             <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                            <Card style={{display:"flex",justifyContent:"center",alignItems:"center",borderStyle:"solid",borderWidth:"0.1px",padding:"4px"}}>
-                                                
-                                                    KeyWord
-                                                
-                                            </Card>
+                                            <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
                                             </div>
                                             
 
@@ -360,7 +350,7 @@ export default function Latest(){
                                     </Grid>
 
                                 </Grid>
-                                <Grid item md={12} lg={3}>
+                                <Grid item xs={12} lg={3}>
                                     <Grid container alignItems="flex-end" justify="flex-end" >
                                         <div style={{display:"flex",minWidth:"120px",height:"10vh",minHeight:"80px",marginLeft:"3vw",alignItems:"center",justifyContent:"flex-end"}}>
                                             <div>

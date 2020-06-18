@@ -1,66 +1,183 @@
 import React,{Component} from 'react';
 import {Bar,Line,Pie} from 'react-chartjs-2';
+import {Grid,Button, Typography} from "@material-ui/core";
+import styles1 from "./Graph.module.css";
+import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+import FolderIcon from '@material-ui/icons/Folder';
+const bargraph={
+    
+        labels:['Monday',"Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        datasets: [
+            {
+                label: "A",
+                backgroundColor:  '#0BB783',
+                borderColor: '#0BB783',
+                data: [60, 90, 120, 60, 90, 120, 60]
+            },
+            {
+                label: "B",
+                backgroundColor: '#F64E60',
+                borderColor: '#F64E60',
+                data: [40, 60, 80, 40, 60, 80, 40]
+            },
+             {
+                 label: "C",
+                 backgroundColor: '#8950FC',
+                 borderColor: '#8950FC',
+                 data: [20, 30, 40, 20, 30, 40, 20]
+             }
 
-class Graph extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            chartData:{
-                labels:['Monday',"Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-
-                ],
-                datasets: [
-                    {
-                        label: "A",
-                        backgroundColor:  'rgba(255, 99, 132, 1)',
-                        borderColor: 'rgba(255,99,132,1)',
-                        data: [60, 90, 120, 60, 90, 120, 60]
-                    },
-                    {
-                        label: "B",
-                        backgroundColor: 'rgba(75, 192, 192, 1)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        data: [40, 60, 80, 40, 60, 80, 40]
-                    },
-                     {
-                         label: "C",
-                         backgroundColor: 'rgba(255, 206, 86, 1)',
-                         borderColor: 'rgba(255, 206, 86, 1)',
-                         data: [20, 30, 40, 20, 30, 40, 20]
-                     }
-        
-                  ]
-            }
-        }
-
-    }
-render(){
+          ]
+    
+}
+ const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      '& > *': {
+        margin: theme.spacing(1),
+      },
+    },
+    small: {
+      width: theme.spacing(4),
+      height: theme.spacing(4),
+      color:"white",
+      backgroundColor:"#F64E60"
+    },
+    small1: {
+        width: theme.spacing(4),
+        height: theme.spacing(4),
+        color:"white",
+        backgroundColor:"#8950FC"
+      },
+    small2: {
+        width: theme.spacing(4),
+        height: theme.spacing(4),
+        color:"white",
+        backgroundColor:"#0BB783"
+      },
+    large: {
+      width: theme.spacing(7),
+      height: theme.spacing(7),
+    },
+  }));
+export default function Graph (){
+    const classes=useStyles()
     return(
-        <div className="chart">
-            <Bar
-            data={this.state.chartData}
-            options={{
-                title:{
-                    display:false,
+
+        <div style={{height:"48vh",maxHeight:"435px",minHeight:"435px"}}>
+            <Grid container direction="row" justify="center" >
+                <Grid items className={styles1.graphwidth}>
+                <Bar
+                    data={bargraph}
+                    width={100}
+                    height={300}
+                    options={{
+                        
+                        maintainAspectRatio: false,
+                        title:{
+                            display:false,
+                            
+                        },
+                        legend:{
+                            display:false,
+                            position:"right"
+                        },
+                        plugins:{
+                            datalabels:{
+                                color:"transparent"
+                            }
+                        },
+                        scales: {
+                            ticks: {
+                                min:0,
+                                max:100
+                            },
+                            xAxes: [{
+                                stacked: true
+                            }],
+                            yAxes: [{
+                                stacked: true
+                            }]
+                        }
+                    }}
+                    />
+                </Grid>
+                <Grid items className={styles1.buttongraph} >
                     
-                },
-                legend:{
-                    display:true,
-                    position:"right"
-                },
-                scales: {
-                    xAxes: [{
-                        stacked: true
-                    }],
-                    yAxes: [{
-                        stacked: true
-                    }]
-                }
-            }}
-            />
+                        
+                            <Button color="primary" variant="outlined" className={styles1.buttons}>
+                                Last Week
+                            </Button>
+                            <Button color="primary" variant="contained" className={styles1.buttons}>
+                                Last 24 Hours
+                            </Button>
+                        
+                        
+                    
+
+                </Grid>
+            </Grid>
+        <Grid items xs={12} md={12} lg={12} style={{marginTop:"30px",marginLeft:"2vw",height:"8vh",marginBottom:"40px"}}>
+            <Grid container direction="row">
             
+                <Grid items>
+                    <Grid container direction="row" alignItems="center">
+                        <Grid items >
+                            <Avatar className={classes.small} >
+                                <FolderIcon />
+                            </Avatar>
+                        </Grid>
+                        <Grid items >
+                            <Grid container direction="column" style={{marginLeft:"10px"}} >
+                                <Typography style={{fontSize:"14px"}}> 29</Typography>
+                                <Typography style={{fontSize:"12px",color:"#B5B5C3",fontWeight:"bold"}}> Personal Information </Typography>
+
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                    
+
+                </Grid>
+                <Grid items style={{marginLeft:"0.8vw"}} >
+                    <Grid container direction="row">
+                        <Grid items>
+                            <Avatar className={classes.small1}>
+                                <FolderIcon />
+                            </Avatar>
+                        </Grid>
+                        <Grid items >
+                            <Grid container direction="column" style={{marginLeft:"10px"}} >
+                                <Typography style={{fontSize:"14px"}}> 62</Typography>
+                                <Typography style={{fontSize:"12px",color:"#B5B5C3",fontWeight:"bold"}}> Passwords Found </Typography>
+
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+                <Grid items style={{marginLeft:"0.8vw"}}>
+                    <Grid container direction="row">
+                        <Grid items>
+                            <Avatar className={classes.small2}>
+                                <FolderIcon />
+                            </Avatar>
+                        </Grid>
+                        <Grid items >
+                            <Grid container direction="column" style={{marginLeft:"10px"}} >
+                                <Typography style={{fontSize:"14px"}}> 20</Typography>
+                                <Typography style={{fontSize:"12px",color:"#B5B5C3",fontWeight:"bold"}}> Hacker Group Targets  </Typography>
+
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+
+
+        </Grid>
         </div>
     )
 }
-}
-export default Graph

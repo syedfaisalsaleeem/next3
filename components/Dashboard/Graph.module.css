@@ -1,0 +1,44 @@
+.graphwidth{
+    width:31.5vw;
+    margin-left:20px;
+    margin-top:20px;
+    min-width:150px;
+    
+}
+.buttongraph{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width:10vw;
+}
+.buttons{
+    margin-top: 20px !important;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px !important;
+    line-height: 12px;
+    text-align: center;
+    
+}
+.circle{
+    background-color: aqua;
+    border-radius: 50%;
+    
+}
+@media only screen and (max-width: 1610px) {
+    .graphwidth{
+        margin-left:20px;
+        width:27.5vw;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .graphwidth{
+        margin-left:20px;
+        width:44.5vw;
+    }
+    .buttongraph{
+        margin-left: 50px;
+    }
+}

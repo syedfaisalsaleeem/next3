@@ -2,39 +2,58 @@ import React from 'react';
 import GaugeChart from './Assets';
 import {Typography,Grid} from '@material-ui/core';
 import CountUp from 'react-countup';
-import InfoIcon from '@material-ui/icons/Info';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import { makeStyles } from '@material-ui/core/styles';
+import styles from "./Gauge.module.css"
+const useStyles = makeStyles((theme) => ({
+    fontgauge: {
+        
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "31.9326px",
+        lineHeight: "48px",
+        
+        color: "#506883"
+      
+    },
+
+  }));
 export default function Gauge(){
+    const classes = useStyles();
  return(
     <div>
-    <Grid container justify="center" >
+    <Grid container justify="center" alignItems="center" style={{height:"31vh",maxHeight:"240px",minHeight:"240px",minWidth:"150px"}}>
         <Grid item >
         <GaugeChart id="gauge-chart3" 
-        nrOfLevels={30} 
-        colors={["#FF5F6D", "#FFC371"]} 
-        arcWidth={0.3} 
+        nrOfLevels={20} 
+        colors={["#F76B1C ", "#D8D8D8"]} 
+        arcWidth={0.37}
+        needleColor={"#506883"}
+        needleBaseColor={"#506883"}
         percent={0.37} 
         textColor={"transparent"}
-        style={{height:"280px",width:"600px"}} 
+        style={{height:"31vh",maxHeight:"20px",minHeight:"140px",width:"30vw",minWidth:"400px"}} 
         
     />
+    
         </Grid>
     </Grid>
    
-    <Grid container direction="row"  justify="center" style={{marginBottom:"6vh"}}>
+    <Grid container direction="row" alignItems="center" justify="center" className={styles.mkheight} >
         <Grid item  >
-        <Typography variant="h4"> <CountUp start={0} end={143} duration={2.5} separator=","/></Typography>
+        <Typography className={classes.fontgauge}> <CountUp start={0} end={143} duration={2.5} separator=","/></Typography>
         
         </Grid>
         <Grid item>
-        <Typography variant="h4" >/</Typography>
+        <Typography className={classes.fontgauge} >/</Typography>
         </Grid>
         
         <Grid item >
-        <Typography variant="h4"> <CountUp start={0} end={300} duration={2.5} separator=","/></Typography>
+        <Typography className={classes.fontgauge}> <CountUp start={0} end={300} duration={2.5} separator=","/></Typography>
         </Grid>
 
-        <Grid item>
-            <InfoIcon/>
+        <Grid item style={{marginLeft:"10px"}}>
+            <InfoOutlinedIcon />
         </Grid>
             
 
