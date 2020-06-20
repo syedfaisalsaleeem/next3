@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
         fontStyle: "normal",
         fontWeight: "normal",
         fontSize: "31.9326px",
+<<<<<<< HEAD
+=======
+        lineHeight: "48px",
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
         
         color: "#506883"
       
@@ -21,7 +25,11 @@ export default function Gauge(){
     const classes = useStyles();
  return(
     <div>
+<<<<<<< HEAD
     <Grid container justify="center" alignItems="center" className={styles.gauge}>
+=======
+    <Grid container justify="center" alignItems="center" style={{height:"31vh",maxHeight:"240px",minHeight:"240px",minWidth:"150px"}}>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
         <Grid item >
         <GaugeChart id="gauge-chart3" 
         nrOfLevels={20} 
@@ -31,7 +39,11 @@ export default function Gauge(){
         needleBaseColor={"#506883"}
         percent={0.37} 
         textColor={"transparent"}
+<<<<<<< HEAD
         className={styles.ingauge}
+=======
+        style={{height:"31vh",maxHeight:"20px",minHeight:"140px",width:"30vw",minWidth:"400px"}} 
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
         
     />
     

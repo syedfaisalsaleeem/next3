@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { InstantSearch,Hits,Highlight} from 'react-instantsearch/dom';
 import Head from "next/head";
 import styles from "./ContactGs1.module.css";
@@ -12,12 +13,18 @@ import SearchIcon from '@material-ui/icons/Search';
 import DirectionsIcon from '@material-ui/icons/Directions';
 import {Button} from "@material-ui/core";
 import { connectSearchBox } from 'react-instantsearch-dom';
+=======
+
+import { InstantSearch, SearchBox, Hits,Highlight} from 'react-instantsearch/dom';
+import Head from "next/head"
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
 const algoliasearch =require("algoliasearch")
 const searchClient = algoliasearch(
     'EIBX1WTLJD',
     '3177db902196a1ed63816828758da5d3'
   );
 
+<<<<<<< HEAD
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -74,6 +81,10 @@ export default function ContactGs1(){
 
 
 const CustomSearchBox = connectSearchBox(SearchBox);
+=======
+ 
+export default function ContactGs1(){
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     const hit=({hit})=>{
         return(
         <div>
@@ -85,6 +96,7 @@ const CustomSearchBox = connectSearchBox(SearchBox);
           
         </div>
         )}
+<<<<<<< HEAD
       const handlechange=(event)=>{
         changesearch(event.target.value)
       }
@@ -102,19 +114,33 @@ const CustomSearchBox = connectSearchBox(SearchBox);
             <Head>
             
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous"></link>
+=======
+    return(
+       <>
+            <Head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+            </link>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
             </Head>
             <main>
                 <div>
                 <InstantSearch
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 indexName="CIH"
                 searchClient={searchClient}
                 
                 >
+<<<<<<< HEAD
                   
                  
                   <CustomSearchBox/>
             
+=======
+                <SearchBox />
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 <div style={{display:"none"}}>
                 <Hits hitComponent={hit}/>
                 </div>

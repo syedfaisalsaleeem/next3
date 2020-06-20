@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
       
     },
+<<<<<<< HEAD
     h:{
         fontStyle: "normal",
         fontWeight: "normal",
@@ -30,6 +31,12 @@ const useStyles = makeStyles((theme) => ({
     HeaderFont:{
         fontFamily: 'Roboto',
         fontSize: "16.9411px" ,
+=======
+    HeaderFont:{
+        fontFamily: 'Roboto', 
+        
+          fontSize:"21px",
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
           fontWeight:"bold",
           fontStyle:"normal"
       },
@@ -42,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
     
     f1:{
+<<<<<<< HEAD
        width:"100%",
        boxShadow: "0px 0px 19.9579px rgba(56, 71, 109, 0.03)",
         borderRadius: "11.9747px",
@@ -75,6 +83,15 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: "0px 0px 19.9579px rgba(56, 71, 109, 0.03)",
         borderRadius: "11.9747px",
         height: "483px"
+=======
+       width:"95%"
+    },
+    f2:{
+        width:"97.4%"
+     },
+     f3:{
+        width:"95%"
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
      },
     control: {
       padding: theme.spacing(2),
@@ -92,6 +109,7 @@ export default function (){
             </Head>
             <main>
             
+<<<<<<< HEAD
             <Grid container className={classes.root} spacing={3}>
                 <Grid item xs={12} md={12}>
                     <Grid container justify="center">
@@ -107,6 +125,24 @@ export default function (){
                     <Grid container justify="center" spacing={4} >
                         <Grid item xs={12} md={5} >
                                     <Grid container justify="center"  >
+=======
+            <Grid container className={classes.root} spacing={2}>
+                <Grid item xs={12}>
+                <Typography variant="h4" gutterBottom>
+                    Security Overview
+                </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Grid container justify="flex-start"  >
+                        <Grid item xs={12} md={12} >
+
+                            <Grid container  justify="space-evenly" spacing={4}>
+
+                            
+                                <Grid item xs={12} sm={10}  lg={5}  >
+                                
+                                    <Grid container justify="flex-start"  >
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                                         <Card className={classes.f1} >
                                             <CardHeader
                                                 className={classes.HeaderFont}
@@ -129,11 +165,19 @@ export default function (){
                                             
                                         </Card>
                                     </Grid>
+<<<<<<< HEAD
                                 
                         </Grid>
                         <Grid item  xs={12} md={6}>
                                     <Grid container justify="center" maxWidth="xl"  >
                                         <Card className={classes.f4}>
+=======
+                                </Grid>
+                                
+                                <Grid item  xs={12} sm={10}  lg={7}>
+                                    <Grid container justify="flex-start" maxWidth="xl"  >
+                                        <Card className={classes.f1}>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                                             <CardHeader
                                             className={classes.HeaderFont}
                                         
@@ -150,6 +194,7 @@ export default function (){
                                             />
                                             <Divider/>
                                             
+<<<<<<< HEAD
                                                 
                                             <Graph/>
                                         
@@ -157,13 +202,26 @@ export default function (){
                                     </Grid>
                                 
                             
+=======
+                                                <Graph/>
+                                            
+                                        
+                                        </Card>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                         </Grid>
                     </Grid>
                 </Grid>
                 
                 <Grid item xs={12} md={12}>
+<<<<<<< HEAD
                     <Grid container justify="center" style={{background:"transparent"}}>
                         <Grid items md={11}>
+=======
+                    <Grid container justify="flex-start" style={{background:"transparent"}}>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                         <Card className={classes.f2}>
                             <CardHeader
                                 className={classes.HeaderFont}
@@ -185,12 +243,16 @@ export default function (){
                             </CardContent>
                             
                         </Card>
+<<<<<<< HEAD
                         </Grid>
                         
+=======
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                     </Grid>
 
                 </Grid>
                 
+<<<<<<< HEAD
                 
                 <Grid item xs={12} md={12}>
                     <Grid container justify="center">
@@ -267,11 +329,25 @@ export default function (){
                         <Grid items xs={12} md={11}>
                             <Card className={classes.f5}>
                                 <CardHeader
+=======
+                <Grid item xs={12}>
+                <Divider style={{marginTop:"20px",marginBottom:"20px"}}/>
+                <Typography variant="h4" gutterBottom>
+                    Security Overview
+                </Typography>
+                </Grid>
+
+                <Grid item xs={12} md={10} lg={6} >
+                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"transparent"}}>
+                        <Card className={classes.f1}>
+                            <CardHeader
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                                 className={classes.HeaderFont}
                             
                                 disableTypography="true" 
                                 action={
                                     
+<<<<<<< HEAD
                                     <IconButton color="primary"  >
                                         <ChevronRightIcon style={{fontSize:"25px"}} />
                                         </IconButton>
@@ -288,6 +364,73 @@ export default function (){
                             </Card>
                         </Grid>
                         
+=======
+                                    <IconButton color="primary" >
+                                    <ChevronRightIcon style={{fontSize:"25px"}}/>
+                                    </IconButton>
+                                    
+                                }
+                                
+                                title="By Category"      
+                                />
+                            <Divider/>
+                            
+                            <Piechart/>
+                            
+                            
+                        </Card>
+                    </Grid>
+                </Grid>
+                <Grid item  xs={12} md={10} lg={6}>
+                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"transparent"}} >
+                        <Card className={classes.f3}>
+                            <CardHeader
+                            className={classes.HeaderFont}
+                           
+                            disableTypography="true" 
+                            action={
+                                
+                                <IconButton color="primary"  >
+                                    <ChevronRightIcon style={{fontSize:"25px"}} />
+                                    </IconButton>
+                                
+                            }
+                            
+                            title="By Risk"      
+                            />
+                            <Divider/>
+                         
+                                <Linechart/>
+                           
+                          
+                        </Card>
+                    </Grid>
+
+                </Grid>
+                <Grid item  xs={12} md={12} >
+                    <Grid container justify="flex-start" maxWidth="xl" style={{background:"transparent"}} >
+                        <Card className={classes.f2}>
+                            <CardHeader
+                            className={classes.HeaderFont}
+                           
+                            disableTypography="true" 
+                            action={
+                                
+                                <IconButton color="primary"  >
+                                    <ChevronRightIcon style={{fontSize:"25px"}} />
+                                    </IconButton>
+                                
+                            }
+                            
+                            title="By Risk"      
+                            />
+                            <Divider/>
+                            
+                                <BarGroup/>
+                            
+                          
+                        </Card>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                     </Grid>
 
                 </Grid>

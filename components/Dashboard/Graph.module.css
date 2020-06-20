@@ -1,15 +1,23 @@
 .graphwidth{
+<<<<<<< HEAD
     display: flex;
     width:72.5%;
     margin-left:10px;
     margin-top:10px;
     
     
+=======
+    width:31.5vw;
+    margin-left:20px;
+    margin-top:20px;
+    min-width:150px;
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     
 }
 .buttongraph{
     display:flex;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: flex-end;
     justify-content: flex-start;
     width:20%;
@@ -25,6 +33,20 @@
     font-style: normal;
     font-weight: normal;
     font-size: 9px !important;
+=======
+    align-items: center;
+    justify-content: flex-start;
+    width:10vw;
+}
+.buttons{
+    margin-top: 20px !important;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px !important;
+    line-height: 12px;
+    text-align: center;
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     
 }
 .circle{
@@ -33,6 +55,7 @@
     
 }
 @media only screen and (max-width: 1610px) {
+<<<<<<< HEAD
     .buttongraph{
         margin-left: 30px;
         width:25%;
@@ -54,10 +77,16 @@
     .graphwidth{
        
         width:60.5%;
+=======
+    .graphwidth{
+        margin-left:20px;
+        width:27.5vw;
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     }
 }
 @media only screen and (max-width: 1200px) {
     .graphwidth{
+<<<<<<< HEAD
         
         width:60.5%;
     }
@@ -76,5 +105,12 @@
         font-weight: normal;
         font-size: 5px !important;
         
+=======
+        margin-left:20px;
+        width:44.5vw;
+    }
+    .buttongraph{
+        margin-left: 50px;
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     }
 }

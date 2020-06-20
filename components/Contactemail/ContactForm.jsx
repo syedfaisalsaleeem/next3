@@ -53,6 +53,7 @@ export default function ContactForm(){
     const classes = useStyles();
     const [age1, setAge1] = React.useState('');
     const [open,handleopen]=React.useState(false)
+<<<<<<< HEAD
     const [check,checkemail]=React.useState();
     const [subject,checksubject]=React.useState("");
     const [authenticate,changeauthenticate]=React.useState();;
@@ -67,25 +68,36 @@ export default function ContactForm(){
           checkemail(false)
           changeauthenticate(true)
         }
+=======
+    const funcopen=()=>{
+      handleopen(true)
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     }
     const funcclose=()=>{
       handleopen(false)
     }
+<<<<<<< HEAD
     const emailcheck=(event)=>{
         const event1=event.target.value;
         checksubject(event1)
 
 
     };
+=======
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     const handleChange = (event) => {
         setAge1(event.target.value);
     };
     return(
 
         <div >
+<<<<<<< HEAD
            <form>
           <Grid container direction="column" justify="center" alignItems="center">
          
+=======
+          <Grid container direction="column" justify="center" alignItems="center">
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
             <FormControl className={classes.formControl} >
                 <InputLabel style={{marginLeft:"20px"}}>Enter Inquiry Time</InputLabel>
                 <Select
@@ -107,7 +119,11 @@ export default function ContactForm(){
             <div>
 
             
+<<<<<<< HEAD
             <div className={classes.email} style={{display:check?"flex":"none"}}>
+=======
+            <div className={classes.email} style={{display:"flex"}}>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                                 <p> Field is  required</p>
                             </div>
               <TextField
@@ -118,7 +134,11 @@ export default function ContactForm(){
                   label="Subject"
                   type="email"
                   variant="outlined"
+<<<<<<< HEAD
                   onChange={emailcheck}
+=======
+                  
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                   fullWidth
               />
                   </div>            
@@ -159,6 +179,7 @@ export default function ContactForm(){
         <Button color="primary" variant="contained" style={{marginTop:"20px",width:"150px"}} onClick={funcopen}>
           Send
         </Button>
+<<<<<<< HEAD
         
             </Grid>
             </form>
@@ -229,6 +250,68 @@ export default function ContactForm(){
 
       }
             
+=======
+            </Grid>
+
+
+
+            <Dialog
+              open={open}
+              
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+              
+              
+          >
+            
+              <DialogTitle>
+              <Grid container style={{height:"6vh",display:"flex"}} >
+                  <Grid items xs={11} style={{height:"6vh",display:"flex"}}>
+                      <Grid container spacing={2}>
+                      <Grid item>
+                      </Grid>
+                      <Grid item>
+                          <Typography component="div" style={{display:"flex",height:"6vh",justifyContent:"flex-start",alignItems:"center"}}>
+                          
+                          
+                          </Typography>
+                      
+                      </Grid>
+                      <Grid item xs={5}>
+                          <Typography style={{display:"flex",height:"6vh",justifyContent:"flex-start",alignItems:"center",marginLeft:"-5px"}}>Message Sent </Typography>
+                      
+                      </Grid>
+                      </Grid>
+                  
+                  </Grid>
+                  
+                  <Grid items xs={1} style={{height:"6vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                  
+                  <CloseIcon onClick={funcclose} />
+                  
+                      
+                  </Grid>
+                  
+                  
+                  
+              </Grid>
+              </DialogTitle>
+              <Divider/>
+              <DialogContent style={{width:"22vw"}}>
+              <DialogContentText id="alert-dialog-description">
+              Your message has been recieved, someone from our team will respond to you within 24 hours.
+              </DialogContentText>
+              </DialogContent>
+              <Divider/>
+              <Typography style={{marginTop:"15px", display:"flex",justifyContent:"space-evenly",alignItems:"center" ,marginBottom:"20px"}}>
+              <Button  type="submit"color="primary" variant="contained" onClick={funcclose}>
+                  Continue
+              </Button>
+              </Typography>
+
+              
+          </Dialog>
+>>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
 
 
 
