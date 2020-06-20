@@ -1,10 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-<<<<<<< HEAD
 import { Bar} from "react-chartjs-2";
-=======
-import { Bar } from "react-chartjs-2";
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
 
 
 
@@ -13,12 +9,9 @@ import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-<<<<<<< HEAD
 import Head from 'next/head'
 require('./RoundedBars.js')
 
-=======
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
 
 
     const databar = {
@@ -73,7 +66,6 @@ require('./RoundedBars.js')
     const useStyles = makeStyles((theme) => ({
       formControl: {
         
-<<<<<<< HEAD
         minWidth: 120,
         
         background:"white",
@@ -82,23 +74,12 @@ require('./RoundedBars.js')
         
         '& fieldset': {
           border: "0.3px solid #000000",
-=======
-        minWidth: 200,
-        width:"5vw",
-        background:"white",
-        marginTop:"20px",
-        marginLeft:"20px",
-        height:"25px",
-        '& fieldset': {
-          border: "1px solid #000000",
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
         }
         
       }
     }))
     
     const options = {
-<<<<<<< HEAD
       
       maintainAspectRatio: false,
       cornerRadius:15,
@@ -139,14 +120,6 @@ require('./RoundedBars.js')
       }
   },
 
-=======
-      maintainAspectRatio: false,
-      legend: {
-        display:true,
-        position:'top',
-        align:'end'
-      },
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
       type: "bar"
 
     };
@@ -164,7 +137,6 @@ require('./RoundedBars.js')
       setAge1(event.target.value);
   };
     return (
-<<<<<<< HEAD
       <div>
 
       
@@ -174,8 +146,6 @@ require('./RoundedBars.js')
       <main>
 
       
-=======
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
       <div style={{maxHeight:"455px",minHeight:"455px",margin:"10px"}}>
           <div styles={{display:"flex",postion:"absolute"}}>
           <FormControl className={classes.formControl} size="small" >
@@ -185,7 +155,6 @@ require('./RoundedBars.js')
                 id="demo-simple-select"
                 value={age1}
                 onChange={handleChange}
-<<<<<<< HEAD
                 style={{height:30}}
                 variant="outlined"
                 displayEmpty
@@ -196,19 +165,6 @@ require('./RoundedBars.js')
               <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
               <MenuItem value={20} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
               <MenuItem value={30} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Thirty</MenuItem>
-=======
-                
-                
-                variant="outlined"
-                displayEmpty
-                >
-               <MenuItem value="">
-              <em>Select Month</em>
-              </MenuItem>  
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl} size="small" >
@@ -218,17 +174,12 @@ require('./RoundedBars.js')
                 id="demo-simple-select"
                 value={age1}
                 onChange={handleChange}
-<<<<<<< HEAD
                 style={{height:30}}
-=======
-                
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 
                 variant="outlined"
                 displayEmpty
                 >
                <MenuItem value="">
-<<<<<<< HEAD
               <em style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Select Week Range</em>
               </MenuItem> 
               <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
@@ -241,34 +192,17 @@ require('./RoundedBars.js')
           
 
           
-=======
-              <em>Select Week Range</em>
-              </MenuItem> 
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
-        </div>
-        <div style={{maxHeight:"400px",minHeight:"400px"}}>
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
         <Bar
           data={databar}
           
           options={options}
         />
         </div>
-<<<<<<< HEAD
         </div>
       
       </main>
       
       </div>
-=======
-        
-      </div>
-      
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     );
   
 

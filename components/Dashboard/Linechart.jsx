@@ -14,11 +14,7 @@ const statelinechart = {
       fill: false,
       lineTension: 0.5,
       backgroundColor: 'grey',
-<<<<<<< HEAD
       borderColor: 'grey',
-=======
-      borderColor: 'rgba(0,0,0,1)',
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
       borderWidth: 2,
       data: [65, 59, 80, 81, 56]
     },
@@ -36,7 +32,6 @@ const statelinechart = {
 }
 const useStyles = makeStyles((theme) => ({
   formControl: {
-<<<<<<< HEAD
         
     minWidth: 120,
     
@@ -46,17 +41,6 @@ const useStyles = makeStyles((theme) => ({
     
     '& fieldset': {
       border: "0.3px solid #000000",
-=======
-    
-    minWidth: 200,
-    width:"5vw",
-    background:"white",
-    marginTop:"20px",
-    marginLeft:"20px",
-    height:"25px",
-    '& fieldset': {
-      border: "1px solid #000000",
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     }
     
   }
@@ -75,22 +59,15 @@ export default function Linechart () {
       setAge1(event.target.value);
   };
     return (
-<<<<<<< HEAD
       <div >
         <div styles={{display:"flex",postion:"absolute"}}>
         <FormControl className={classes.formControl} size="small" >
-=======
-      <div style={{maxHeight:"455px",minHeight:"455px",margin:"10px"}}>
-        <div styles={{display:"flex",postion:"absolute"}}>
-          <FormControl className={classes.formControl} size="small" >
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 
                 <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={age1}
                 onChange={handleChange}
-<<<<<<< HEAD
                 style={{height:30}}
                 variant="outlined"
                 displayEmpty
@@ -101,19 +78,6 @@ export default function Linechart () {
               <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
               <MenuItem value={20} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
               <MenuItem value={30} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Thirty</MenuItem>
-=======
-                
-                
-                variant="outlined"
-                displayEmpty
-                >
-               <MenuItem value="">
-              <em>Select Month</em>
-              </MenuItem>  
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl} size="small" >
@@ -123,17 +87,12 @@ export default function Linechart () {
                 id="demo-simple-select"
                 value={age1}
                 onChange={handleChange}
-<<<<<<< HEAD
                 style={{height:30}}
-=======
-                
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                 
                 variant="outlined"
                 displayEmpty
                 >
                <MenuItem value="">
-<<<<<<< HEAD
               <em style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Select Week Range</em>
               </MenuItem> 
               <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
@@ -148,20 +107,6 @@ export default function Linechart () {
           
           options={{
             maintainAspectRatio: false,
-=======
-              <em>Select Week Range</em>
-              </MenuItem> 
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
-        </div>
-        <Line
-          data={statelinechart}
-          options={{
-            
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
             title:{
               display:true,
               
@@ -170,7 +115,6 @@ export default function Linechart () {
             legend:{
               display:true,
               position:'top',
-<<<<<<< HEAD
               align:'end',
               
               labels:{
@@ -207,12 +151,6 @@ export default function Linechart () {
         />
         </div>
         
-=======
-              align:'end'
-            }
-          }}
-        />
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
       </div>
     );
   

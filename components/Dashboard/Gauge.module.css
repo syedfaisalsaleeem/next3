@@ -1,5 +1,4 @@
 .mkheight{
-<<<<<<< HEAD
     
     margin-top: 0px;
     margin-bottom: 20px;
@@ -51,18 +50,5 @@
     .ingauge{
         
         min-width: 150px;
-=======
-    height:16vh;
-    max-height:150px;
-    min-height:150px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-@media only screen and (max-width: 1600px) {
-    .mkheight{
-        margin-top: -40px;
-        margin-bottom: 40px;
-        min-height:200px;
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
     }
 }

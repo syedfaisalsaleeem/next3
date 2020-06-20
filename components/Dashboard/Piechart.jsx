@@ -52,11 +52,7 @@ class Piechart extends Component{
     }
 render(){
     return(
-<<<<<<< HEAD
         <div className="chart" style={{height:"48%",maxHeight:"350px",minHeight:"350px",margin:"20px"}}>
-=======
-        <div className="chart" style={{height:"48vh",maxHeight:"435px",minHeight:"435px",margin:"20px"}}>
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
             
                 <Doughnut
             data= {{
@@ -75,19 +71,12 @@ render(){
             display: true,
             position: 'right',
             labels: {
-<<<<<<< HEAD
                 boxWidth: 15,
                 fontColor: '#8D9AA9',
                 padding: 25,
                 fontSize: 18,
                 usePointStyle: true ,
                 
-=======
-                boxWidth: 20,
-                fontColor: '#8D9AA9',
-                padding: 15,
-                fontSize: 20
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
             }
         },
         tooltips: {
@@ -104,11 +93,7 @@ render(){
                 font: {
                     lineHeight: 0,
                     weight: 'bold',
-<<<<<<< HEAD
                     size: 24,
-=======
-                    size: 26,
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
                     
                 },
                 

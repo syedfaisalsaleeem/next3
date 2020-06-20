@@ -14,12 +14,8 @@ import { grey } from '@material-ui/core/colors';
 import NotificationBadge from 'react-notification-badge';
 import {Effect} from 'react-notification-badge';
 import styles from "./Header.module.css"
-<<<<<<< HEAD
 import CyberDrawer from "../components/Drawer";
 import {Avatar} from "@material-ui/core"
-=======
-import CyberDrawer from "../components/Drawer"
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
 
 
 
@@ -128,7 +124,6 @@ export default function Header(props) {
             
             
             
-<<<<<<< HEAD
             
                 <div style={{display:"flex",alignItems:"center"}}>
                
@@ -136,19 +131,6 @@ export default function Header(props) {
                   
                 </div>
              
-=======
-            <div className={classes.userlogo}>
-            <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                
-                onClick={handleMenu}
-                style={{backgroundColor:"#D7F9EF"}}
-              >
-                <p className={classes.userp}>M</p>
-                </IconButton>
-            </div> 
->>>>>>> 64a6f9b5d9ec025a1b1851ee99eb25efa9021a35
 
               <Menu
                 id="simple-menu"
