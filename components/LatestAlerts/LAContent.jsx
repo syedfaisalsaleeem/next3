@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SUContent (){
     const classes = useStyles();
     return(
-        <div style={{background:"#E5E5E5",height:"100vh"}}>
+        <div style={{background:"#E5E5E5",height:"100vh",width:"98vw"}}>
             <Grid container   justify="center" spacing={2}>
                 <Grid item xs={12} style={{marginTop:"70px"}}>
 
