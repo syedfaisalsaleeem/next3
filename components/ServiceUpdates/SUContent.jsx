@@ -20,18 +20,18 @@ const useStyles = makeStyles((theme) => ({
     },
     },
   }));
-export default function NContent (){
+export default function SUContent (){
     const classes = useStyles();
     return(
-        <div style={{background:"#E5E5E5"}}>
+        <div style={{background:"#E5E5E5",height:"100vh"}}>
             < Grid container   justify="center" spacing={2}>
                 <Grid item xs={12} style={{marginTop:"70px"}}>
 
                 </Grid>
                 <Grid item xs={11}  className={classes.root}>
-                <Chip size="Large" label="Service Updates" variant="outlined" className={classes.chipborder} />
-                <Chip size="Large" label="Latest Alerts" variant="outlined" className={classes.chipborder} />
-                <Chip size="Large" label="Support Updates" variant="outlined" className={classes.chipborder} />
+                <Chip size="medium" label="Service Updates" variant="outlined" className={classes.chipborder} style={{background:"#35374C",fontSize:"14px",color:"white",border: "0.6px solid #35374C"}}/>
+                <Chip size="Large" label="Latest Alerts" variant="outlined" className={classes.chipborder} style={{background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="Large" label="Support Updates" variant="outlined" className={classes.chipborder} style={{background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}} />
 
                 </Grid>
             
@@ -63,66 +63,8 @@ export default function NContent (){
                 <LatestCardN1/>
                 <LatestCardN1/>
                 <LatestCardN1/>
-                
                 </Grid>
-                <Grid item xs={11}>
-                    <Grid container direction="row">
-                        <Grid item>
-                            <Typography variant="h4">
-                                Latest Alerts
-                                
-                            </Typography>
-                        </Grid>
-                        
-                        <Grid item xs={10} >
-                            
-                            <Typography component="div" style={{marginTop:"20px",marginLeft:"20px",height:"2px",background:"black"}}>
-                                
-                            
-                                </Typography>
-                            
-                            
-                            
-                        </Grid>
 
-                    </Grid>
-
-                </Grid>
-                <Grid item xs={11}>
-                <LatestCardN/>
-                <LatestCardN/>
-                <LatestCardN/>
-               
-                </Grid>
-                <Grid item xs={11}>
-                    <Grid container direction="row">
-                        <Grid item>
-                            <Typography variant="h4">
-                                Support Updates
-                                
-                            </Typography>
-                        </Grid>
-                        
-                        <Grid item xs={10} >
-                            
-                            <Typography component="div" style={{marginTop:"20px",marginLeft:"20px",height:"2px",background:"black"}}>
-                                
-                            
-                                </Typography>
-                            
-                            
-                            
-                        </Grid>
-
-                    </Grid>
-
-                </Grid>
-                <Grid item xs={11}>
-                <LatestCardN1/>
-                <LatestCardN1/>
-                <LatestCardN1/>
-               
-                </Grid>
 
                 
             

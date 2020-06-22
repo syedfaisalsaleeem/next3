@@ -3,6 +3,7 @@ import {Container,Grid,Chip,Divider,Typography} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import LatestCardN from "./LatestCardN.jsx";
 import LatestCardN1 from "./LatestCardN1.jsx";
+import Link from "next/link";
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -29,10 +30,12 @@ export default function NContent (){
 
                 </Grid>
                 <Grid item xs={11}  className={classes.root}>
+                <Link href="./ServiceUpdates">
+                <Chip size="Large" label="Service Updates" variant="outlined" className={classes.chipborder}  style={{background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                </Link>
                 
-                <Chip size="Large" label="Service Updates" variant="outlined" className={classes.chipborder} />
-                <Chip size="Large" label="Latest Alerts" variant="outlined" className={classes.chipborder} />
-                <Chip size="Large" label="Support Updates" variant="outlined" className={classes.chipborder} />
+                <Chip size="Large" label="Latest Alerts" variant="outlined" className={classes.chipborder} style={{background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="Large" label="Support Updates" variant="outlined" className={classes.chipborder} style={{background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
 
                 </Grid>
             
