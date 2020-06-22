@@ -46,7 +46,7 @@ export default function ContactC (){
                             <Grid container direction="column" justify="center" spacing={1}>
                                 <Grid item >
                                     <Grid container justify="center">
-                                        <FlagIcon style={{fontSize:"50px"}} />
+                                        <FlagIcon style={{fontSize:"40px"}} />
                                     </Grid>
                                     
                                 </Grid>
@@ -66,7 +66,7 @@ export default function ContactC (){
                             <Grid container direction="column" justify="center" spacing={1}>
                                 <Grid item >
                                     <Grid container justify="center">
-                                        <MenuBookIcon style={{fontSize:"50px"}} />
+                                        <MenuBookIcon style={{fontSize:"40px"}} />
                                     </Grid>
                                     
                                 </Grid>
@@ -85,7 +85,7 @@ export default function ContactC (){
                                 <Grid container direction="column" justify="center" spacing={1}>
                                     <Grid item >
                                         <Grid container justify="center">
-                                            <ContactMailIcon style={{fontSize:"50px",color:"#8950FC"}} />
+                                            <ContactMailIcon style={{fontSize:"40px",color:"#8950FC"}} />
                                         </Grid>
                                         
                                     </Grid>
@@ -107,7 +107,7 @@ export default function ContactC (){
                 <Grid item xs={12} style={{marginTop:"20px"}}>
                     <Grid container alignItems="center" direction="column">
                         
-                        <Typography variant="h3">Getting Started</Typography>
+                        <Typography variant="h3" gutterBottom>Getting Started</Typography>
                         <Typography variant="p">Description tagline will go here...</Typography>
                         
                         

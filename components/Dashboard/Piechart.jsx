@@ -52,7 +52,7 @@ class Piechart extends Component{
     }
 render(){
     return(
-        <div className="chart" style={{height:"48%",maxHeight:"350px",minHeight:"350px",margin:"20px"}}>
+        <div className="chart" style={{maxHeight:"300px",minHeight:"300px",margin:"20px",marginTop:"50px",width:"90%"}}>
             
                 <Doughnut
             data= {{
@@ -91,9 +91,10 @@ render(){
                 
                 
                 font: {
+                    family:"Roboto",
                     lineHeight: 0,
                     weight: 'bold',
-                    size: 24,
+                    size: 22,
                     
                 },
                 

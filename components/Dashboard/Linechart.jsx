@@ -93,7 +93,7 @@ export default function Linechart () {
                 displayEmpty
                 >
                <MenuItem value="">
-              <em style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Select Week Range</em>
+              <em style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal',fontFamily:"Roboto"}}>Select Week Range</em>
               </MenuItem> 
               <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
               <MenuItem value={20} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
@@ -101,11 +101,19 @@ export default function Linechart () {
                 </Select>
             </FormControl>
         </div>
-        <div style={{marginTop:"-35px",height:"48%",maxHeight:"350px",minHeight:"350px",marginLeft:"20px",width:"88%"}}>
+        <div style={{marginTop:"-48px",height:"48%",maxHeight:"350px",minHeight:"350px",marginLeft:"20px",width:"88%"}}>
         <Line
           data={statelinechart}
           
           options={{
+            layout: {
+              padding: {
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  bottom: 0
+              }
+          },
             maintainAspectRatio: false,
             title:{
               display:true,
@@ -116,11 +124,18 @@ export default function Linechart () {
               display:true,
               position:'top',
               align:'end',
-              
-              labels:{
-                padding:25,
+              fullWidth:true,
+
+              labels: {
+                
+                padding: 25,
                 usePointStyle: true ,
+                fontFamily:"Roboto",
+                fontStyle:"bold",
+               
+                
               }
+              
             },
             scales: {
               ticks: {
@@ -143,6 +158,7 @@ export default function Linechart () {
               }]
           },
           plugins:{
+            
             datalabels:{
                 color:"transparent"
             }

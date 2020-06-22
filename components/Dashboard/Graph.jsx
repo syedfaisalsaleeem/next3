@@ -39,20 +39,20 @@ const bargraph={
       },
     },
     small: {
-      width: theme.spacing(3),
-      height: theme.spacing(3),
+      width: theme.spacing(4),
+      height: theme.spacing(4),
       color:"white",
       backgroundColor:"#F64E60"
     },
     small1: {
-        width: theme.spacing(3),
-        height: theme.spacing(3),
+        width: theme.spacing(4),
+        height: theme.spacing(4),
         color:"white",
         backgroundColor:"#8950FC"
       },
     small2: {
-        width: theme.spacing(3),
-        height: theme.spacing(3),
+        width: theme.spacing(4),
+        height: theme.spacing(4),
         color:"white",
         backgroundColor:"#0BB783"
       },
@@ -133,13 +133,13 @@ export default function Graph (){
                     <Grid container direction="row" alignItems="center">
                         <Grid items >
                             <Avatar className={classes.small} >
-                                <FolderIcon style={{fontSize:"16px"}} />
+                                <FolderIcon style={{fontSize:"17px"}} />
                             </Avatar>
                         </Grid>
                         <Grid items >
                             <Grid container direction="column" style={{marginLeft:"10px"}} >
-                                <Typography style={{fontSize:"12px"}}> 29</Typography>
-                                <Typography style={{fontSize:"10px",color:"#B5B5C3",fontWeight:"bold"}}> Personal Information </Typography>
+                                <Typography style={{fontSize:"14px"}}> 29</Typography>
+                                <Typography style={{fontSize:"13px",color:"#B5B5C3",fontWeight:"bold"}}> Personal Information </Typography>
 
                             </Grid>
                         </Grid>
@@ -152,13 +152,13 @@ export default function Graph (){
                     <Grid container direction="row" alignItems="center">
                         <Grid items>
                             <Avatar className={classes.small1}>
-                                <FolderIcon style={{fontSize:"16px"}} />
+                                <FolderIcon style={{fontSize:"17px"}} />
                             </Avatar>
                         </Grid>
                         <Grid items >
                             <Grid container direction="column" style={{marginLeft:"10px"}} >
-                                <Typography style={{fontSize:"12px"}}> 62</Typography>
-                                <Typography style={{fontSize:"10px",color:"#B5B5C3",fontWeight:"bold"}}> Passwords Found </Typography>
+                                <Typography style={{fontSize:"14px"}}> 62</Typography>
+                                <Typography style={{fontSize:"13px",color:"#B5B5C3",fontWeight:"bold"}}> Passwords Found </Typography>
 
                             </Grid>
                         </Grid>
@@ -169,13 +169,13 @@ export default function Graph (){
                     <Grid container direction="row" alignItems="center">
                         <Grid items>
                             <Avatar className={classes.small2}>
-                                <FolderIcon style={{fontSize:"16px"}} />
+                                <FolderIcon style={{fontSize:"17px"}} />
                             </Avatar>
                         </Grid>
                         <Grid items >
                             <Grid container direction="column" style={{marginLeft:"10px"}} >
-                                <Typography style={{fontSize:"12px"}}> 20</Typography>
-                                <Typography style={{fontSize:"10px",color:"#B5B5C3",fontWeight:"bold"}}> Hacker Group Targets  </Typography>
+                                <Typography style={{fontSize:"14px"}}> 20</Typography>
+                                <Typography style={{fontSize:"13px",color:"#B5B5C3",fontWeight:"bold"}}> Hacker Group Targets  </Typography>
 
                             </Grid>
                         </Grid>

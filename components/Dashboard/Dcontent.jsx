@@ -17,6 +17,7 @@ import Piechart from "./Piechart.jsx";
 import Linechart from "./Linechart.jsx";
 import BarGroup from "./BarGroup.jsx";
 import Gauge from "./Gauge.jsx"
+
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,

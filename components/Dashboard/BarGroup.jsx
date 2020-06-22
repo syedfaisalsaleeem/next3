@@ -82,7 +82,7 @@ require('./RoundedBars.js')
     const options = {
       
       maintainAspectRatio: false,
-      cornerRadius:15,
+      cornerRadius:0,
       legend: {
         display:true,
         position:'top',
@@ -90,6 +90,8 @@ require('./RoundedBars.js')
         labels:{
           padding:25,
           usePointStyle: true ,
+          fontFamily:"Roboto",
+          fontStyle:"bold",
         }
       },
       scales: {
@@ -160,11 +162,11 @@ require('./RoundedBars.js')
                 displayEmpty
                 >
                <MenuItem value="" >
-              <em style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Select Month</em>
+              <em style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Select Month</em>
               </MenuItem>  
-              <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
-              <MenuItem value={20} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
-              <MenuItem value={30} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Thirty</MenuItem>
+              <MenuItem value={10} style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
+              <MenuItem value={20} style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
+              <MenuItem value={30} style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Thirty</MenuItem>
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl} size="small" >
@@ -180,11 +182,11 @@ require('./RoundedBars.js')
                 displayEmpty
                 >
                <MenuItem value="">
-              <em style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Select Week Range</em>
+              <em style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Select Week Range</em>
               </MenuItem> 
-              <MenuItem value={10} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
-              <MenuItem value={20} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
-              <MenuItem value={30} style={{fontSize:"12px",fontWeight:"bold",fontStyle:'normal'}}>Thirty</MenuItem>
+              <MenuItem value={10} style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Ten</MenuItem>
+              <MenuItem value={20} style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Twenty</MenuItem>
+              <MenuItem value={30} style={{fontSize:"13px",fontWeight:"bold",fontStyle:'normal'}}>Thirty</MenuItem>
                 </Select>
             </FormControl>
         </div>

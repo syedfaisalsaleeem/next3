@@ -93,14 +93,18 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         marginTop:"20px",
         boxShadow: '1 0px 0px 0px rgba(255, 105, 135, .3)',
+        padding: theme.spacing(2),
     },
     f2:{
       background: 'white',
         borderRadius: 3,
         border: 0,
         color: 'black',
-        marginTop:"0px",
+        marginTop:"10px",
         boxShadow: '1 0px 0px 0px rgba(255, 105, 135, .3)',
+        
+      padding: theme.spacing(2),
+
     },
     Typofont:{
         fontSize:"17px",
@@ -399,7 +403,7 @@ export default function Swindow(){
                   disableTypography="true" 
                  action={
                     
-                    <Button variant="contained" color="primary" onClick={handleClickOpen} style={{position:"static"}}>Update</Button>
+                    <Button variant="contained" color="primary" onClick={handleClickOpen} style={{position:"static",marginTop:"10px"}}>Update</Button>
                     
                   }
                 
@@ -468,7 +472,7 @@ export default function Swindow(){
                   disableTypography="true" 
                  action={
                     
-                    <Button variant="contained" color="primary" onClick={handleClickOpen1} style={{position:"static"}}>Update</Button>
+                    <Button variant="contained" color="primary" onClick={handleClickOpen1} style={{position:"static",marginTop:"10px"}}>Update</Button>
                     
                   }
                 
@@ -518,7 +522,7 @@ export default function Swindow(){
                   disableTypography="true" 
                  action={
                     
-                    <Button variant="contained" color="primary" onClick={handleClickOpen2} style={{position:"static"}}>Update</Button>
+                    <Button variant="contained" color="primary" onClick={handleClickOpen2} style={{position:"static",marginTop:"10px"}}>Update</Button>
                     
                   }
                 

@@ -20,11 +20,11 @@
     
     line-height: 12px;
     text-align: center;
-    width: 110px;
+    width: 120px;
     height: 30px;
     font-style: normal;
     font-weight: normal;
-    font-size: 9px !important;
+    font-size: 11px !important;
     
 }
 .circle{
@@ -47,7 +47,7 @@
         height: 20px;
         font-style: normal;
         font-weight: normal;
-        font-size: 5px !important;
+        font-size: 10px !important;
         
     }
 
@@ -74,7 +74,7 @@
         height: 20px;
         font-style: normal;
         font-weight: normal;
-        font-size: 5px !important;
+        font-size: 10px !important;
         
     }
 }
