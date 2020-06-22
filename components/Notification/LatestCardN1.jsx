@@ -19,8 +19,16 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import RemoveRoundedIcon from '@material-ui/icons/RemoveRounded';
 import Chip from '@material-ui/core/Chip';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import {Avatar} from "@material-ui/core"
+import {Avatar,Badge} from "@material-ui/core"
 import FolderIcon from '@material-ui/icons/Folder';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import styles from "../Dashboard/LatestCard.module.css";
+import CloseIcon from '@material-ui/icons/Close';
+
 const useStyles = makeStyles((theme) => ({
     Buttons:{
         marginTop:"5px",
@@ -123,6 +131,17 @@ const useStyles = makeStyles((theme) => ({
         borderWidth:"1px"
 
       },
+      small2: {
+        
+        width: theme.spacing(6),
+        height: theme.spacing(6),
+        color:"black",
+        backgroundColor:"white",
+        border:"solid",
+        borderColor:"black",
+        borderWidth:"1px"
+
+      },
   }));
 export default function LatestCardN1(){
     const classes = useStyles();
@@ -131,6 +150,15 @@ export default function LatestCardN1(){
     const addcount=()=>{
         setclick(!click)
     }
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
     return(
     <div>
         <Grid container spacing={3}>
@@ -149,9 +177,11 @@ export default function LatestCardN1(){
                                         <div style={{display:"flex",flexDirection:"column",minWidth:"70px",minHeight:"79px",borderStyle:"solid",borderWidth:"0.1px",borderTop:"white",borderLeft:"white",borderBottom:"white"}} >
                                             
                                                 <div style={{display:"flex",minWidth:"70px",minHeight:"40px",justifyContent:"center",alignItems:"flex-end",fontSize:"14px"}} >
+                                                <Badge color="secondary" variant="dot" overlap="circle" color="primary" >
                                                 <Avatar className={classes.small1} >
                                                     <FolderIcon style={{fontSize:"18px"}} />
                                                 </Avatar>
+                                                </Badge>
                                                 </div>
                                                 
                                             
@@ -186,8 +216,9 @@ export default function LatestCardN1(){
                                         
 
                                     </Grid>
+                                    <Divider orientation="vertical"></Divider>
                                     <Grid item >
-                                        <div style={{display:"flex",marginTop:"3px",flexDirection:"column",minWidth:"70px",minHeight:"70px",marginLeft:"3vw",borderLeft:"solid",paddingLeft:"20px",paddingRight:"20px"}} >
+                                        <div style={{display:"flex",marginTop:"3px",flexDirection:"column",minWidth:"70px",minHeight:"70px",marginLeft:"3vw",borderLeft:"1px solid rgba(0, 0, 0, 0.5)",paddingLeft:"20px",paddingRight:"20px"}} >
                                             
                                             <div className={classes.top} >
                                             Description
@@ -210,7 +241,7 @@ export default function LatestCardN1(){
                                             </div>
                                             <div>
                                             <Grid container justify="flex-end" style={{marginTop:"5px"}}>
-                                                <IconButton aria-label="settings" >
+                                                <IconButton aria-label="settings" onClick={handleClickOpen} >
                                                 <ChevronRightIcon style={{fontSize:"30px"}}/>
                                                 </IconButton>
                                                 
@@ -225,51 +256,101 @@ export default function LatestCardN1(){
                         </Card>
             </Grid>            
         </Grid>
-        <Grid item xs={12} md={12} style={{display:click?"block":"none"}}>
-                    <Grid container justify="flex-start" maxWidth="xl" >
-                        <Card className={classes.f3}>
-                            <Grid item md={12} lg={12}>
-                                <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"4vh",minHeight:"40px",margin:"0.3vw",justifyContent:"center",alignItems:"center"}} >
-                                <Card className={classes.f4}>
-                                <Grid container alignItems="center" direction="row" >
-                                    
-                                    <div style={{padding:"10px"}}>
-                                        8 :
-                                    </div>
-                                    <Divider orientation="vertical" flexItem />
-                                    <div style={{padding:"10px",color:"white"}}>
-                                    Woody
-                                    </div>
-                                    <Divider orientation="vertical" style={{background:"white"}} flexItem />
-                                    <div style={{padding:"10px"}}>
-                                    McGibbon
-                                    </div>
-                                    <Divider orientation="vertical" style={{background:"white"}} flexItem />
-                                    <div style={{padding:"10px"}}>
-                                    woodymcgibbon@dempcompany.com
-                                    </div>
-                                    <Divider orientation="vertical" style={{background:"white"}} flexItem />
-                                    <div style={{padding:"10px"}}>
-                                    woodymcgibbon@dempcompany.com
-                                    </div>
-                                    <Divider orientation="vertical" style={{background:"white"}} flexItem />
-                                    <div style={{padding:"10px"}}>
-                                    1963-04-12
-                                    </div>
-                                    <Divider orientation="vertical" style={{background:"white"}} flexItem />
-                                    <div style={{padding:"10px"}}>
-                                    2017-04-08 23:25:41
-                                    </div>
-                                    
-                                </Grid>
-                                </Card>
-                                </div>
-                            </Grid>
-                                 
-                        
-                        </Card>
+        <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                maxWidth={"lg"}
+                
+            >
+                
+                <DialogTitle>
+                                    <Grid container style={{height:"90px",marginTop:"-25px",marginLeft:"-24px"}} >
+                                        <Grid items xs={11}>
+                                            <Grid container direction="row">
+                                            <Grid item xs={2} style={{backgroundColor:"white"}}>
+                                                <Grid container direction="row">
+                                                    <Grid item xs={10} style={{height:"105px",borderRight:"0.6px solid rgba(0, 0, 0, 0.5)"}}>
+                                                    <Grid container justify="center">
+                                                        <Grid item>
+                                                        <div style={{paddingTop:"20px",paddingLeft:"20px"}}>
+                                                        <Avatar className={classes.small2} >
+                                                            <FolderIcon style={{fontSize:"23px"}} />
+                                                        </Avatar>
+                                                        </div>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        <div container style={{display:"flex",fontSize:"14px",minWidth:"70px",minHeight:"40px",justifyContent:"center",alignItems:"center",color:"black",opacity: "0.5"}} >
+                                                        DD-MM-YYYY
+                                                        </div>
+                                                        </Grid>
+                                                    </Grid>
+                                                    
+                                                    </Grid>
+                                                </Grid>
+                                                
+                                            
+                                            </Grid>
+                                            <Grid item xs={4}>
+                                            <div style={{display:"flex",flexDirection:"column",marginTop:"10px",minHeight:"60px",marginLeft:"1.5vw"}} >
+                                            
+
+                                            <div style={{paddingTop:"23px",fontSize:"22px"}}>
+                                            Subject Goes Here ...
+                                            </div>
+
+                                            </div>
+                                            </Grid>
+                                            
+                                            </Grid>
+                                        
+                                        </Grid>
+                                        
+                                        <Grid items xs={1} style={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
+                                        
+                                        <CloseIcon onClick={handleClose} />
+                                        
+                                            
+                                        </Grid>
+                                        
+                                        
+                                        
+                                    </Grid>
+                </DialogTitle>                  
+                <Divider/>
+                <DialogContent >
+                
+
+                <Grid item xs={12} style={{margin:"20px"}}>
+                    <Grid container justify="center">
+                    <img src="./brain.jpg" style={{width:"440",height:"300px"}} ></img>
                     </Grid>
+                    
+                
                 </Grid>
+
+                <Grid item xs={12} style={{margin:"30px"}}>
+                    <Grid container justify="center">
+                        <Grid item xs={7} style={{fontSize:"16px",fontWeight:"normal",fontStyle:"normal"}}>
+    Hacker groups such as Anonymous are loosely associated international networks of activist and hacktivist entities. They organise attack campaigns that begin with a published manifesto, a statement why the attack takes place, followed by target lists and communication regarding performing the attack. When hacker groups target organisations, this indicates an intentional attempt to break into their systems or perform denial of service attacks that cause downtime for critical systems. Whether attack groups are successful or not depends on the target organisation's security posture and the participating hacktivists' skills and tools. Perform asset discovery to understand what systems are visible from your organisation publicly. Test your network perimeter. Provide awareness training for the users about phishing threats.
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+
+                
+
+
+    
+        </DialogContent>
+        
+      </Dialog>
     </Grid>
     </div>
     

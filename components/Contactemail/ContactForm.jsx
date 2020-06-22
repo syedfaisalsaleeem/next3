@@ -87,7 +87,7 @@ export default function ContactForm(){
           <Grid container direction="column" justify="center" alignItems="center">
          
             <FormControl className={classes.formControl} >
-                <InputLabel style={{marginLeft:"20px"}}>Enter Inquiry Time</InputLabel>
+                
                 <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
@@ -98,7 +98,9 @@ export default function ContactForm(){
                 variant="outlined"
                 displayEmpty
                 >
-                
+                <MenuItem value="" >
+              <em >Select Inquiry Time</em>
+              </MenuItem> 
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
