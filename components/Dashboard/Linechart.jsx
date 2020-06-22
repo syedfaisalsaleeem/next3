@@ -106,14 +106,7 @@ export default function Linechart () {
           data={statelinechart}
           
           options={{
-            layout: {
-              padding: {
-                  left: 0,
-                  right: 0,
-                  top: 0,
-                  bottom: 0
-              }
-          },
+            
             maintainAspectRatio: false,
             title:{
               display:true,
@@ -124,7 +117,7 @@ export default function Linechart () {
               display:true,
               position:'top',
               align:'end',
-              fullWidth:true,
+              
 
               labels: {
                 

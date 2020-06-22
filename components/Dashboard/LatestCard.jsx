@@ -18,6 +18,13 @@ import Container from '@material-ui/core/Container';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import RemoveRoundedIcon from '@material-ui/icons/RemoveRounded';
 import Chip from '@material-ui/core/Chip';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import styles from "./LatestCard.module.css";
+import CloseIcon from '@material-ui/icons/Close';
 const useStyles = makeStyles((theme) => ({
     Buttons:{
         marginTop:"5px",
@@ -111,12 +118,22 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 export default function LatestCard(){
+    const [fullWidth, setFullWidth] = React.useState(true);
     const classes = useStyles();
     const [st1,set]=React.useState([""]);
     const [click,setclick]=React.useState(true);
     const addcount=()=>{
         setclick(!click)
     }
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
     return(
     <div>
         <Grid container spacing={2}>
@@ -219,7 +236,7 @@ export default function LatestCard(){
                                     <Grid container alignItems="flex-end" justify="flex-end" >
                                         <div style={{display:"flex",minWidth:"120px",height:"10vh",minHeight:"80px",marginLeft:"3vw",alignItems:"center",justifyContent:"flex-end"}}>
                                             <div>
-                                            <Button color="primary" variant="contained" className={classes.Buttons}>
+                                            <Button color="primary" variant="contained" className={classes.Buttons} onClick={handleClickOpen}>
                                                 View Details
                                             </Button>
                                             </div>
@@ -287,6 +304,142 @@ export default function LatestCard(){
                     </Grid>
                 </Grid>
     </Grid>
+
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                maxWidth={"lg"}
+                
+            >
+                <DialogContent >
+                
+                                    <Grid container style={{height:"60px",marginTop:"-25px",marginLeft:"-24px"}} >
+                                        <Grid items xs={11}>
+                                            <Grid container direction="row">
+                                            <Grid item xs={2} style={{backgroundColor:"white"}}>
+                                                <Grid container direction="row">
+                                                    <Grid item xs={10} style={{background:"#66BB6A",height:"58px"}}>
+                                                    <Grid container justify="center">
+                                                        <Grid item>
+                                                            <Typography component="div" style={{marginTop:"16px",color:"white"}}>
+                                                                LOW
+                                                    
+                                                            </Typography>
+                                                        </Grid>
+                                                    </Grid>
+                                                    
+                                                    </Grid>
+                                                </Grid>
+                                                
+                                            
+                                            </Grid>
+                                            <Grid item xs={5}>
+                                                <Typography style={{display:"flex",justifyContent:"flex-start",alignItems:"center",marginLeft:"-5px"}}>Account Information </Typography>
+                                            
+                                            </Grid>
+                                            </Grid>
+                                        
+                                        </Grid>
+                                        
+                                        <Grid items xs={1} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                        
+                                        <CloseIcon onClick={handleClose} />
+                                        
+                                            
+                                        </Grid>
+                                        
+                                        
+                                        
+                                    </Grid>
+                                    
+                <Divider/>
+                
+                <div className={styles.main} >
+            <div className={styles.detect} >
+            <h2>Detect</h2>
+            
+            <div className={styles.date1} >
+                <p>DD-MM-YYYY</p>
+            </div>
+
+            </div>
+
+            <div className={styles.alert} >
+            <h2>Alert Created</h2>
+            
+            <div className={styles.date2} >
+                <p>DD-MM-YYYY</p>
+            </div>
+            </div>
+        </div>
+
+
+        <div className={styles.main2}>
+            <div className={styles.tagged} >
+                <h2>Tagged</h2>
+            </div>
+
+            <div className={styles.keys} >
+
+            <div className={styles.key1} >
+                key word
+            </div>
+            <div className={styles.key2} >
+                key word
+            </div>
+
+            <div className={styles.key3} >
+                key word
+            </div>
+
+            <div className={styles.key4} >
+                key word
+            </div>
+            </div>
+        </div>
+
+
+        <div className={styles.main3} >
+
+            <div className={styles.data} >
+                <h2>Data</h2>
+            </div>
+
+            <div className={styles.para} >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur temporibus tenetur placeat nulla explicabo dolorum reprehenderit sint sequi. Voluptatum rerum provident perferendis nulla eius beatae repellat pariatur tenetur aliquam, maxime magni quia dolore esse. Commodi laudantium earum, explicabo perspiciatis tempora alias quod reiciendis .
+                <br/>
+                <br/>
+                Quidem ea dolore, cupiditate 
+            </div>
+        </div>
+
+
+        <div className={styles.main4} >
+
+            <div className={styles.remedition} >
+            <h2>Remedition Suggestion</h2>
+            </div>
+
+            <div className={styles.para2} >
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, possimus delectus, veritatis, saepe minus excepturi tempore cupiditate aperiam vitae sequi inventore pariatur numquam accusantium neque necessitatibus deserunt exercitationem unde? Odio iste hic iusto id veniam provident a laboriosam non? Laudantium quos nisi excepturi corrupti natus tempora commodi, optio ad culpa eius hic sint ipsa maxime nemo magni architecto tenetur facere praesentium eligendi molestiae aspernatur. Deleniti nemo dicta, similique totam corporis facilis sint ipsa autem est distinctio minima tempore id placeat, nostrum iusto neque ratione ad. Voluptatem libero numquam saepe, quas, fuga placeat, minus amet officiis dolores possimus eum? Exercitationem, in</p>
+            </div>
+        </div>
+
+
+
+    
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Track Remedition
+          </Button>
+          <Button onClick={handleClose} color="primary" autoFocus>
+            Analyst Support
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
     
     )
