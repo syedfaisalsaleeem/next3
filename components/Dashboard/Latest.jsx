@@ -18,7 +18,7 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import RemoveRoundedIcon from '@material-ui/icons/RemoveRounded';
 import Chip from '@material-ui/core/Chip';
 import LatestCard from "./LatestCard";
-import Link from "next/link";
+
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -154,7 +154,7 @@ export default function Latest(){
                             <CardContent>
                             <Grid container justify="center" maxWidth="xl"  alignContent="center" >
                                     <Grid item xs={5} xl={2} >
-                                        <Link href="./Notification">
+                                        
 
                                         
                                         <Container maxWidth="sm" style={{display:"flex", flexDirection:"column",justifyContent:"center",background:"white",alignItems:"center"}}>
@@ -166,7 +166,7 @@ export default function Latest(){
                                             <ExpandMoreOutlinedIcon/>
                                         </Typography>
                                         </Container>
-                                        </Link>
+                                        
                                     </Grid>
                             </Grid>
                             </CardContent>

@@ -17,7 +17,7 @@ import styles from "./Header.module.css"
 import CyberDrawer from "../components/Drawer";
 import {Avatar} from "@material-ui/core"
 
-
+import Link from "next/link"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -110,14 +110,16 @@ export default function Header(props) {
           </Typography>
             <div className={classes.ic1}>
                 <div className={classes.ic}>
-                <IconButton>
+                <Link href="./Notification">
+                  <IconButton>
+                  
+                  
+                  <NotificationsNoneRoundedIcon style={{ color: grey[700],fontSize:"30px" }}/>
+                  </IconButton>
+                  </Link>
+                  <NotificationBadge style={{position:"absolute",marginTop:"-50px"}} count={count} effect={Effect.SCALE}/>
+                  </div>
                 
-                
-                <NotificationsNoneRoundedIcon style={{ color: grey[700],fontSize:"30px" }}/>
-                </IconButton>
-                <NotificationBadge style={{position:"absolute",marginTop:"-50px"}} count={count} effect={Effect.SCALE}/>
-                </div>
-            
             <div className={classes.user}>
                 <p style={{fontSize:"16px"}}> Hi, User Name</p>
             </div>
