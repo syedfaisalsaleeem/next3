@@ -313,17 +313,17 @@ export default function LatestCard(){
                 maxWidth={"lg"}
                 
             >
-                <DialogContent >
                 
+                <DialogTitle>
                                     <Grid container style={{height:"60px",marginTop:"-25px",marginLeft:"-24px"}} >
                                         <Grid items xs={11}>
                                             <Grid container direction="row">
                                             <Grid item xs={2} style={{backgroundColor:"white"}}>
                                                 <Grid container direction="row">
-                                                    <Grid item xs={10} style={{background:"#66BB6A",height:"58px"}}>
+                                                    <Grid item xs={10} style={{background:"#66BB6A",height:"75px"}}>
                                                     <Grid container justify="center">
                                                         <Grid item>
-                                                            <Typography component="div" style={{marginTop:"16px",color:"white"}}>
+                                                            <Typography component="div" style={{marginTop:"30px",color:"white"}}>
                                                                 LOW
                                                     
                                                             </Typography>
@@ -335,15 +335,37 @@ export default function LatestCard(){
                                                 
                                             
                                             </Grid>
-                                            <Grid item xs={5}>
-                                                <Typography style={{display:"flex",justifyContent:"flex-start",alignItems:"center",marginLeft:"-5px"}}>Account Information </Typography>
+                                            <Grid item xs={4}>
+                                            <div style={{display:"flex",flexDirection:"column",marginTop:"10px",minHeight:"60px",marginLeft:"1.5vw"}} >
                                             
+                                            <div style={{paddingTop:'2px'}}>
+                                            Type
+                                            </div>
+
+                                            <div className={classes.bottom} >
+                                            Type Goes Here
+                                            </div>
+
+                                            </div>
+                                            </Grid>
+                                            <Grid item xs={5}>
+                                            <div style={{display:"flex",flexDirection:"column",marginTop:"10px",minHeight:"60px",marginLeft:"1vw"}} >
+                                            
+                                            <div style={{paddingTop:'2px'}} >
+                                            Source
+                                            </div>
+
+                                            <div className={classes.bottom} >
+                                            https://Type-Goes-Here.com
+                                            </div>
+
+                                            </div>
                                             </Grid>
                                             </Grid>
                                         
                                         </Grid>
                                         
-                                        <Grid items xs={1} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                        <Grid items xs={1} style={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
                                         
                                         <CloseIcon onClick={handleClose} />
                                         
@@ -353,9 +375,9 @@ export default function LatestCard(){
                                         
                                         
                                     </Grid>
-                                    
+                </DialogTitle>                  
                 <Divider/>
-                
+                <DialogContent >
                 <div className={styles.main} >
             <div className={styles.detect} >
             <h2>Detect</h2>
@@ -431,11 +453,11 @@ export default function LatestCard(){
 
     
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
+        <DialogActions style={{marginRight:"15px",marginBottom:"20px"}}>
+          <Button onClick={handleClose} color="primary" style={{border:"0.8px solid #000000",color:"black",padding:"12px",marginRight:"10px",fontSize:"15px"}}>
             Track Remedition
           </Button>
-          <Button onClick={handleClose} color="primary" autoFocus>
+          <Button onClick={handleClose} color="primary" variant="contained" style={{padding:"12px",fontSize:"15px"}} autoFocus>
             Analyst Support
           </Button>
         </DialogActions>
