@@ -23,7 +23,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import styles from "./LatestCard.module.css";
+import styles from "../Dashboard/LatestCard.module.css";
 import CloseIcon from '@material-ui/icons/Close';
 const useStyles = makeStyles((theme) => ({
     Buttons:{
@@ -49,9 +49,10 @@ const useStyles = makeStyles((theme) => ({
     f1:{
         width:"100%",
         boxShadow: "0px 0px 35px rgba(181, 181, 195, 0.15)",
+        
         background: "#FFFFFF",
         borderRadius: "2px",
-        border: "0.1px solid #000000",
+        
         boxSizing: "border-box",
         borderRadius: "2px"
         
@@ -90,32 +91,21 @@ const useStyles = makeStyles((theme) => ({
     },
     top:{
         display:"flex",
-        
-        height:"35px",
-        
+        minWidth:"70px",
+        height:"5vh",
+        minHeight:"40px",
         justifyContent:"flex-start",
         alignItems:"flex-end",
         fontStyle: "normal",
         fontWeight: "700",
         fontSize: "17px",
-        marginBottom:"4px",
-        
+        marginBottom:"5px"
     },
     bottom:{
-        display:"flex",justifyContent:"flex-start",alignItems:"flex-start",
+        display:"flex",minWidth:"70px",height:"5vh",minHeight:"40px",justifyContent:"flex-start",alignItems:"flex-start",
         fontStyle: "normal",
         fontWeight: "400",
-        fontSize: "15px",
-        
-        height:"35px"
-    },
-    bottom1:{
-        display:"flex",justifyContent:"flex-start",alignItems:"flex-start",
-        fontStyle: "normal",
-        fontWeight: "400",
-        fontSize: "15px",
-        
-        height:"35px"
+        fontSize: "15px"
     },
     chipborder:{
         border:"solid",
@@ -128,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
     },
   }));
-export default function LatestCard(){
+export default function LatestCardN2(){
     const [fullWidth, setFullWidth] = React.useState(true);
     const classes = useStyles();
     const [st1,set]=React.useState([""]);
@@ -157,13 +147,12 @@ export default function LatestCard(){
                             
                                 
                             <Grid container justify="flex-start" direction="row" maxWidth="xl" style={{background:"white"}} spacing={0} >
-                                
-                                <Grid item xs={12} lg={2}>
+                                <Grid item xs={12} lg={9}>
                                     <Grid container direction="row">
-                                    <Grid item xs={12} style={{background:"white"}}>
-                                        <div style={{display:"flex",flexDirection:"column",width:"170px",borderStyle:"solid",borderWidth:"0.1px",borderTop:"white",borderLeft:"white",borderBottom:"white"}} >
+                                    <Grid item  style={{background:"white",minWidth:"150px",minHeight:"110px",marginRight:"30px"}}>
+                                        <div style={{display:"flex",flexDirection:"column",minWidth:"70px",minHeight:"110px",borderStyle:"solid",borderWidth:"0.1px",borderTop:"white",borderLeft:"white",borderBottom:"white"}} >
                                             
-                                                <div style={{display:"flex",justifyContent:"center",padding:"30px",alignItems:"center",fontSize:"14px"}} >
+                                                <div style={{display:"flex",minWidth:"70px",minHeight:"55px",justifyContent:"center",alignItems:"center",fontSize:"14px"}} >
                                                 DD-MM-YYYY
                                                 </div>
                                             
@@ -173,7 +162,7 @@ export default function LatestCard(){
                                             
                                             
                                                 
-                                                <div container style={{display:"flex",fontSize:"18px",fontWeight:"600",padding:"30px",justifyContent:"center",alignItems:"center",background:"#66BB6A",color:"white"}} >
+                                                <div container style={{display:"flex",fontSize:"18px",fontWeight:"600",minWidth:"70px",minHeight:"55px",justifyContent:"center",alignItems:"center",background:"#66BB6A",color:"white"}} >
                                                 Low
                                                 </div>
                                             
@@ -184,161 +173,81 @@ export default function LatestCard(){
                                         </div>
 
                                     </Grid>
-                                </Grid>
-                                </Grid>
-                                <Grid item xs={12} lg={8}>
-                                    <Grid container direction="column">
-                                    <Grid item xs={12} lg={12}>
-                                    <Grid container>
-                                        <Grid item xs={12} lg={4} >
-                                        <div style={{display:"flex",flexDirection:"column",paddingLeft:"20px"}} >
-                                                
-                                                <div className={classes.top} >
-                                                Type
-                                                </div>
+                                    <Grid item >
+                                    <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
+                                            
+                                            <div className={classes.top} >
+                                            Type
+                                            </div>
 
-                                                <div className={classes.bottom} >
-                                                Type goes here
-                                                </div>
+                                            <div className={classes.bottom} >
+                                            Type goes here
+                                            </div>
+
+                                    </div>
+                                        
+
+                                    </Grid>
+                                    <Grid item >
+                                        <div style={{display:"flex",flexDirection:"column",minWidth:"70px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
+                                            
+                                            <div className={classes.top} >
+                                            Source
+                                            </div>
+
+                                            <div className={classes.bottom} >
+                                            https://Type-Goes-Here.com
+                                            </div>
 
                                         </div>
-                                            
 
-                                        </Grid>
-
-                                        <Grid item xs={12} lg={4}>
-                                            <div style={{display:"flex",flexDirection:"column"}} >
-                                                
-                                                <div className={classes.top} >
-                                                Source
-                                                </div>
-
-                                                <div className={classes.bottom} >
-                                                https://Type-Goes-Here.com
-                                                </div>
-
-                                            </div>
-
-                                        </Grid>
-
-                                        <Grid item xs={12} lg={4}>
-                                            <Grid container justify="flex-start" >
-                                                
-                                            <div style={{display:"flex",flexDirection:"column"}} >
-                                                
-                                                <div className={classes.top} >
-                                                Key Words
-                                                </div>
-
-                                                <div className={classes.bottom} >
-                                                    
-                                                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                                    <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
-                                                    </div>
-                                                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                                    <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
-                                                    </div>
-                                                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                                    <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
-                                                    </div>
-                                                    
-                                                    
-                                                    
-                                                    
-
-                                            </div>
-                                            </div>
-                                                
-                                            
-                                            </Grid>
-
-                                        </Grid>
-                                    </Grid>                                        
                                     </Grid>
-                                    <Grid item xs={12}>
-                                        <Grid Container>
-                                        <Grid item xs={12} lg={12} >
-                                            <Grid container justify="flex-start" >
-                                                
-                                            <div style={{display:"flex",flexDirection:"column",paddingLeft:"20px"}} >
-                                                
-                                                <div className={classes.top} >
-                                                Tags
-                                                </div>
-
-                                                <div className={classes.bottom} >
-                                                    
-                                                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                                    <Chip  size="small" label="Tags" variant="outlined" className={classes.chipborder}/>
-                                                    </div>
-                                                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                                    <Chip  size="small" label="Tags" variant="outlined" className={classes.chipborder}/>
-                                                    </div>
-                                                    <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
-                                                    <Chip  size="small" label="Tags" variant="outlined" className={classes.chipborder}/>
-                                                    </div>
-                                                    
-                                                    
-
-                                            </div>
-                                            </div>
-                                                
+                                    <Grid item >
+                                        <Grid container justify="flex-start" >
                                             
-                                            </Grid>
+                                        <div style={{display:"flex",flexDirection:"column",minWidth:"120px",height:"10vh",minHeight:"80px",marginLeft:"3vw"}} >
+                                            
+                                            <div className={classes.top} >
+                                            Key Words
+                                            </div>
 
-                                        </Grid>
+                                            <div className={classes.bottom} >
+                                                
+                                                <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
+                                                <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
+                                                </div>
+                                                <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
+                                                <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
+                                                </div>
+                                                <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"5px"}}>
+                                                <Chip  size="small" label="KeyWord" variant="outlined" className={classes.chipborder}/>
+                                                </div>
+                                                
 
-
+                                        </div>
+                                        </div>
+                                            
+                                        
                                         </Grid>
 
                                     </Grid>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
                                     </Grid>
-
-                                    
-
-
                                 </Grid>
-                                
-                                <Grid item xs={12} lg={2}>
-                                    <Grid container alignItems="flex-end" justify="flex-end" direction="column" >
-                                        <Grid item xs={12} style={{paddingTop:"54px"}}>
-
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                        <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
+                                <Grid item xs={12} lg={3}>
+                                    <Grid container alignItems="flex-end" justify="flex-end" >
+                                        <div style={{display:"flex",minWidth:"150px",height:"10vh",minHeight:"80px",alignItems:"center",justifyContent:"flex-start"}}>
                                             <div>
                                             <Button color="primary" variant="contained" className={classes.Buttons} onClick={handleClickOpen}>
                                                 View Details
                                             </Button>
                                             </div>
-                                            <div>
-                                            <Grid container justify="flex-end" style={{marginTop:"5px"}}>
-                                                <IconButton aria-label="settings" onClick={addcount} >
-                                                    <AddOutlinedIcon  style={{display:click?"none":"block",fontSize:"32px"}}/>
-                                                    <RemoveRoundedIcon  style={{display:click?"block":"none",fontSize:"32px"}} />
-                                                </IconButton>
-                                                
-                                            </Grid>
-                                            </div>
+                                            
                                             
                                         </div>
-                                        </Grid>
-                                        
-                                        
                                     </Grid>
-                                    
                                     
                                 </Grid>
                             </Grid>
-                            
                         </Card>
             </Grid>            
         </Grid>
@@ -426,7 +335,7 @@ export default function LatestCard(){
                                             Type
                                             </div>
 
-                                            <div className={classes.bottom1} >
+                                            <div className={classes.bottom} >
                                             Type Goes Here
                                             </div>
 
@@ -439,7 +348,7 @@ export default function LatestCard(){
                                             Source
                                             </div>
 
-                                            <div className={classes.bottom1} >
+                                            <div className={classes.bottom} >
                                             https://Type-Goes-Here.com
                                             </div>
 
@@ -484,7 +393,7 @@ export default function LatestCard(){
 
         <div className={styles.main2}>
             <div className={styles.tagged} >
-                <h2>Key Word</h2>
+                <h2>Tagged</h2>
             </div>
 
             <div className={styles.keys} >
@@ -505,29 +414,7 @@ export default function LatestCard(){
             </div>
             </div>
         </div>
-        <div className={styles.main2}>
-            <div className={styles.tagged1} >
-                <h2>Tags</h2>
-            </div>
 
-            <div className={styles.keys1} >
-
-            <div className={styles.key11} >
-                Tag
-            </div>
-            <div className={styles.key12} >
-                Tag
-            </div>
-
-            <div className={styles.key13} >
-                Tag
-            </div>
-
-            <div className={styles.key14} >
-                Tag
-            </div>
-            </div>
-        </div>
 
         <div className={styles.main3} >
 

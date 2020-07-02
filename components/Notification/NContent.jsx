@@ -1,8 +1,10 @@
 import React from 'react';
 import {Container,Grid,Chip,Divider,Typography} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-import LatestCardN from "./LatestCardN.jsx";
+import LatestCard from "../Dashboard/LatestCard";
+
 import LatestCardN1 from "./LatestCardN1.jsx";
+import LatestCardN2 from "./LatestCardN2.jsx";
 import Link from "next/link";
 import styles from "./NContent.module.css"
 const useStyles = makeStyles((theme) => ({
@@ -32,13 +34,13 @@ export default function NContent (){
                 </Grid>
                 <Grid item xs={11}  className={classes.root}>
                 <Link href="./ServiceUpdates">
-                <Chip size="Large" label="Service Updates" variant="outlined" className={classes.chipborder}  style={{padding:"10px",background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="Large" label="Service Updates" variant="outlined" className={classes.chipborder}  style={{padding:"10px",background:"#E5E5E5",fontSize:"16px",color:"black",border: "0.6px solid #000000"}}/>
                 </Link>
                 <Link href="./LatestAlerts">
-                <Chip size="Large" label="Latest Alerts" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="Large" label="Latest Alerts" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"16px",color:"black",border: "0.6px solid #000000"}}/>
                 </Link>
                 <Link href="./SupportUpdates">
-                <Chip size="Large" label="Support Updates" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="Large" label="Support Updates" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"16px",color:"black",border: "0.6px solid #000000"}}/>
                 </Link>
                 </Grid>
             
@@ -105,9 +107,9 @@ export default function NContent (){
 
                 </Grid>
                 <Grid item xs={11} >
-                <LatestCardN/>
-                <LatestCardN/>
-                <LatestCardN/>
+                <LatestCard/>
+                <LatestCard/>
+                <LatestCard/>
                
                 </Grid>
                 <Grid item xs={11} style={{margin:"17px",marginTop:"25px"}}>
@@ -137,6 +139,41 @@ export default function NContent (){
                 <LatestCardN1/>
                 <LatestCardN1/>
                 <LatestCardN1/>
+               
+                </Grid>
+
+                
+                <Grid item xs={11} style={{marginTop:"70px"}}>
+
+                </Grid>
+
+                <Grid item xs={11} style={{margin:"17px",marginTop:"25px"}}>
+                    <Grid container direction="row" spacing={3}>
+                        <Grid item>
+                            <Typography variant="h4" style={{fontSize:"20px",fontStyle:"normal",fontWeight:"500"}}>
+                                Latest Updates
+                                
+                            </Typography>
+                        </Grid>
+                        
+                        <Grid item xs={10} >
+                            
+                            <Typography component="div" className={styles.header}>
+                                
+                            
+                                </Typography>
+                            
+                            
+                            
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+                <Grid item xs={11}>
+                <LatestCardN2/>
+                <LatestCardN2/>
+                <LatestCardN2/>
                
                 </Grid>
 

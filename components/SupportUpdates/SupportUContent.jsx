@@ -34,13 +34,13 @@ export default function SupportUContent (){
                 </Grid>
                 <Grid item xs={11}  className={classes.root}>
                 <Link href="./ServiceUpdates">
-                <Chip size="medium" label="Service Updates" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="medium" label="Service Updates" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"16px",color:"black",border: "0.6px solid #000000"}}/>
                 </Link>
                 <Link href="./LatestAlerts">
-                <Chip size="medium" label="Latest Alerts" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"14px",color:"black",border: "0.6px solid #000000"}}/>
+                <Chip size="medium" label="Latest Alerts" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#E5E5E5",fontSize:"16px",color:"black",border: "0.6px solid #000000"}}/>
                 </Link>
                 <Link href="./Notification">
-               <Chip size="medium" label="Support Updates" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#35374C",fontSize:"14px",color:"white",border: "0.6px solid #35374C"}} />
+               <Chip size="medium" label="Support Updates" variant="outlined" className={classes.chipborder} style={{padding:"10px",background:"#35374C",fontSize:"16px",color:"white",border: "0.6px solid #35374C"}} />
                </Link>
                 </Grid>
                 <Grid item xs={11} className={classes.root}>

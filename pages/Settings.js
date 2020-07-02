@@ -22,7 +22,9 @@ class Home extends React.Component {
     }
     )
   }
-render(){  
+ 
+render(){ 
+  
   return (
     <div className="container">
       <Head>

@@ -9,7 +9,7 @@ import FlagIcon from '@material-ui/icons/Flag';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import Link from "next/link";
-export default function ContactC (){
+export default function ContactC (props){
     return(
         <div>
             <Grid container>
@@ -82,8 +82,17 @@ export default function ContactC (){
 
                         </Grid>
                         <Grid item lg={3} md={3} xs={4}>
-                        <Link href="./Contactus1">
+                        <Link 
+                        href={{
+                            pathname: "/Contactus1"
+                          }}
+                        >
+                        
+                            
+                                
+                            
                             <Card style={{paddingTop:"20px",paddingBottom:"20px"}}>
+                            
                                 <Grid container direction="column" justify="center" spacing={1}>
                                     <Grid item >
                                         <Grid container justify="center">
@@ -100,6 +109,7 @@ export default function ContactC (){
                                 
                                 </Grid>
                             </Card>
+                            
                             </Link>
                         </Grid>
                         </Grid>

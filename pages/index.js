@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Login from "./Login";
 import React from 'react';
-
-class Home extends React.Component {
-render(){  
+import Page from "./Page.jsx"
+function Home ({data}) {
+  
+  console.log(data.userId)
   return (
     <div className="container">
       <Head>
@@ -16,8 +17,8 @@ render(){
       
         
         
-        
         <Login/>
+        
         
 
       </main>
@@ -49,6 +50,22 @@ render(){
       `}</style>
     </div>
   )
-      }
+      
 }
+export async function getStaticProps() {
+  const res = await fetch('https://if.cyberintelligencehouse.com/api/partner')
+  const data = await res.json()
+
+  return {
+    props:{
+      data
+    }
+    
+      
+        
+      
+    
+  }
+}
+
 export default Home;

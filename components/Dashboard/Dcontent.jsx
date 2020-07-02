@@ -121,7 +121,7 @@ export default function (){
                                                     
                                                 }
                                                 
-                                                title="Cyber Exposure Score "      
+                                                title="Exposure Meter"      
                                                 />
                                             <Divider/>
                                             

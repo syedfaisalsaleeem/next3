@@ -42,6 +42,25 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     fontSize: "13px",
 },
+email1:{
+    
+  position: "absolute",
+  marginLeft: "35.5vw",
+  width:"170px",
+  height:"38px",
+  marginTop: "10px",
+  backgroundColor: "white",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "10px solid #FFFFFF",
+  boxSizing: "border-box",
+  boxShadow: "0px 0px 20px rgba(92, 111, 139, 0.12)",
+  borderRadius: "9px",
+  
+  fontStyle: "normal",
+  fontWeight: "bold",
+  fontSize: "13px",
+},
   input: {
     display: 'none',
   },
@@ -54,14 +73,22 @@ export default function ContactForm(){
     const [age1, setAge1] = React.useState('');
     const [open,handleopen]=React.useState(false)
     const [check,checkemail]=React.useState();
+    const [inquirytype,changeinquiry]=React.useState();
     const [subject,checksubject]=React.useState("");
+    const [inquiry,checkinquiry]=React.useState("");
     const [authenticate,changeauthenticate]=React.useState();;
     const funcopen=()=>{
       handleopen(true)
       console.log(subject,"event1")
-      if(subject===""){
+      if(inquiry===""){
+          checkemail(false)
+          changeinquiry(true)
+          changeauthenticate(false)
+      }
+      else if(subject===""){
           checkemail(true)
           changeauthenticate(false)
+          changeinquiry(false)
         }
         else{
           checkemail(false)
@@ -77,6 +104,11 @@ export default function ContactForm(){
 
 
     };
+    const inquirycheck=(event)=>{
+      const event1=event.target.value
+      checkinquiry(event1)
+      console.log(event1)
+    }
     const handleChange = (event) => {
         setAge1(event.target.value);
     };
@@ -87,19 +119,21 @@ export default function ContactForm(){
           <Grid container direction="column" justify="center" alignItems="center">
          
             <FormControl className={classes.formControl} >
-                
+            <div className={classes.email1} style={{display:inquirytype?"flex":"none"}}>
+                                <p> Field is  required</p>
+                            </div> 
                 <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={age1}
-                onChange={handleChange}
+                value={inquiry}
+                onChange={inquirycheck}
                 
                 
                 variant="outlined"
                 displayEmpty
                 >
                 <MenuItem value="" >
-              <em >Select Inquiry Time</em>
+              <em >Select Inquiry Type</em>
               </MenuItem> 
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
@@ -211,7 +245,7 @@ export default function ContactForm(){
       <Divider/>
       <DialogContent style={{width:"22vw"}}>
       <DialogContentText id="alert-dialog-description">
-      Your message has been recieved, someone from our team will respond to you within 24 hours.
+      Your message has been received, our team will respond to you within 24 hours.
       </DialogContentText>
       </DialogContent>
       <Divider/>

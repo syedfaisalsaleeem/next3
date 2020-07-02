@@ -149,7 +149,7 @@ export default function ContactDrawer(props) {
             </ListItem>
             <ListItem className={classes.ltext1}>
                 <ListItemIcon><img src="exposedsystems.png" width="28px" height="28px" /> </ListItemIcon>
-                <ListItemText disableTypography = {"false"} primary={"Exposed Systems"}/>
+                <ListItemText disableTypography = {"false"} primary={"Monitored Systems"}/>
             </ListItem>
             <Link href="/Settings">
             <ListItem className={classes.ltext1}>

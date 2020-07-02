@@ -34,7 +34,9 @@
     margin-left: 30px;
     font-size: 15px;
   }
+
 .key1 {
+    
     margin-top: 65px;
     margin-left: -70px;
     border: 1px solid black;
@@ -69,6 +71,51 @@
 .keys {
     display: flex;
     margin-bottom: 20px;
+    margin-left: -30px;
+}
+.tagged1 {
+    display: flex;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+.key11 {
+  
+  margin-top: 65px;
+  margin-left: -70px;
+  border: 1px solid black;
+  border-radius:10px;
+  width: 90px;
+  text-align: center;
+}
+.key12 {
+  margin-left: 5%;
+  margin-top: 65px;
+  border: 1px solid black;
+  border-radius:10px;
+  width: 90px;
+  text-align: center;
+}
+.key13 {
+  margin-left: 5%;
+  margin-top: 65px;
+  border: 1px solid black;
+  border-radius:10px;
+  width: 90px;
+  text-align: center;
+}
+.key14 {
+  margin-left: 5%;
+  margin-top: 65px;
+  border: 1px solid black;
+  border-radius:10px;
+  width: 90px;
+  text-align: center;
+}
+.keys1{
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 .main2 {
     border-bottom: 2px solid gray;
